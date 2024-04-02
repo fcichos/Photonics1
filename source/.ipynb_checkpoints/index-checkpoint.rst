@@ -27,7 +27,7 @@ We will not present a comprehensive list of numerical simulation schemes, but us
    :maxdepth: 2
    :caption: Lecture 1:
 
-   lectures/L1/1_ray_optics.rst
+   notebooks/L1/1_ray_optics.rst
    
 Indices and tables
 ==================
