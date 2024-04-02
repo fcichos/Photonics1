@@ -17,13 +17,13 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Experimental Physics 3'
-copyright = '2020, Frank Cichos'
+project = 'Introduction to Photonics 1'
+copyright = '2024, Frank Cichos'
 author = 'Frank Cichos'
 master_doc = 'index'
 
 # The full version, including alpha/beta/rc tags
-release = '1'
+release = '24'
 
 
 # -- General configuration ---------------------------------------------------
@@ -37,13 +37,14 @@ extensions = [
     'nbsphinx',
     'IPython.sphinxext.ipython_console_highlighting',
     'IPython.sphinxext.ipython_directive',
+    'furo.sphinxext',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
 templates_path = ['_templates']
 
-mathjax_config = {
+mathjax3_config = {
 'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
 }
 
@@ -52,13 +53,14 @@ mathjax_config = {
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-import sphinx_rtd_theme
+#import sphinx_rtd_theme
 
-html_theme = 'sphinx_rtd_theme'
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme = 'sphinx_rtd_theme'
+#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme = 'furo'
 
-def setup(app):
-    app.add_stylesheet('theme_overrides.css')
+#def setup(app):
+#    app.add_stylesheet('theme_overrides.css')
 
 # html_logo = 'img/HY-logo-2017.png'
 
@@ -70,9 +72,9 @@ html_last_updated_fmt = ""
 # documentation.
 #
 
-html_theme_options = {
-    "collapse_navigation" : False
-}
+#html_theme_options = {
+#    "collapse_navigation" : False
+#}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -96,7 +98,7 @@ html_context = {
     # Set the following variables to generate the resulting github URL for each page.
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     'github_user': 'fcichos',
-    'github_repo': 'exp3',
+    'github_repo': 'Photonics1',
     'github_version': 'master/',
     'conf_py_path': '/source/'
 }
@@ -106,8 +108,8 @@ html_logo = 'img/mona_logo.png'
 # -- Extension configuration -------------------------------------------------
 # This is processed by Jinja2 and inserted before each notebook
 
-nbsphinx_prolog = """
-{% set docname = env.doc2path(env.docname, base='source') %}
+nbsphinx_prolog = r"""
+{% set docname = env.doc2path(env.docname, base=False) %}
 
 .. only:: html
 
@@ -115,8 +117,10 @@ nbsphinx_prolog = """
         :format: html
 
     .. nbinfo::
-        This page was generated from `{{ docname }}`_.
-        :raw-html:`<br/><a href="https://mybinder.org/v2/gh/fcichos/website/master?urlpath=tree/{{ docname }}"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a>`
+        This page was generated from `{{ docname }}`.        
+        :raw-html:`<br/><a href="https://colab.research.google.com/github/fcichos/Photonics1/blob/master/source/{{ docname }}"><img alt="Binder badge" src="https://img.shields.io/badge/launch-%20colab-green.svg" style="vertical-align:text-bottom"></a>`
+        :raw-html:`<br/><a href="https://mybinder.org/v2/gh/fcichos/Photonics1.git/master?labpath=source/{{ docname }}"><img alt="Binder badge" src="https://img.shields.io/badge/launch-%20myBinder-red.svg" style="vertical-align:text-bottom"></a>` 
+        
 
 .. only:: latex
 
@@ -127,4 +131,5 @@ nbsphinx_allow_errors = True
 
 # Sphinx versioning settings
 scv_show_banner = True
-scv_whitelist_branches = ('master', 'develop')
+scv_whitelist_branches = ('main', 'master')
+

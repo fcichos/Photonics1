@@ -1,516 +1,223 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
 
-
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Notebook editor &mdash; Experimental Physics 3 1 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
-
-  
-  
-  
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Entering code" href="EditCells.html" />
-    <link rel="prev" title="Introduction to Jupyter" href="Introduction2Jupyter.html" /> 
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Experimental Physics 3
-          
-
-          
-            
-            <img src="../../_static/mona_logo.png" class="logo" alt="Logo"/>
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Course Information:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../course-info/website.html">This Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../course-info/schedule.html">Course Schedule</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../course-info/assignments.html">Assignments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../course-info/exam.html">Exams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#molecular-nanophotonics-group">Molecular Nanophotonics Group</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#python-documentation">Python Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#python-tutorials">Python Tutorials</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../course-info/instructor.html">Instructor</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Jupyter Notebooks:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Introduction2Jupyter.html#Kernels">Kernels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Introduction2Jupyter.html#Notebook-documents">Notebook documents</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Notebook editor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Edit-mode">Edit mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Command-mode">Command mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Keyboard-navigation">Keyboard navigation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Running-code">Running code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Managing-the-kernel">Managing the kernel</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="EditCells.html">Entering code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EditCells.html#Entering-Markdown">Entering Markdown</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="EditCells.html#Markdown-basics">Markdown basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EditCells.html#Headings">Headings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EditCells.html#Embedded-code">Embedded code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EditCells.html#LaTeX-equations">LaTeX equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EditCells.html#Images">Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EditCells.html#Videos">Videos</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Lecture 1:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../lectures/L1/overview_1.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L1/1_variables.html">Variables and types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L1/1_variables.html#Symbol-names">Symbol names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/1_variables.html#Variable-Assignment">Variable Assignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/1_variables.html#Number-types">Number types</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L1/1_variables.html#Integers">Integers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L1/1_variables.html#Floating-Point">Floating Point</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L1/1_variables.html#Complex-Numbers">Complex Numbers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L1/1_variables.html#Type-casting">Type casting</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../L1/2_operators.html">Operators and comparisons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L1/3_datatypes.html">Data Types in Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L1/3_datatypes.html#Strings">Strings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/3_datatypes.html#Lists">Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/3_datatypes.html#Tuples">Tuples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/3_datatypes.html#Dictionaries">Dictionaries</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../L1/4_modules.html">Modules and namespaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L1/4_modules.html#Modules">Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/4_modules.html#Namespaces">Namespaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/4_modules.html#Contents-of-a-module">Contents of a module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../lectures/L1/assignment_1.html">Exercise 1</a></li>
-</ul>
-
-            
-          
-        </div>
-        
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Experimental Physics 3</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Notebook editor</li>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2023.03.27 -->
+        <title>Notebook editor - Introduction to Photonics 1 24 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            
-              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/Intro/NotebookEditor.ipynb" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
-      </li>
-    
-  </ul>
 
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  
+
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
-    border: none;
-    padding: 0 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
     }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
     }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
 
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
 
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    background: #f5f5f5;
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
 
 
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-}
 
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/Intro/NotebookEditor.ipynb`_</span></a>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/website/master?urlpath=tree/source/notebooks/Intro/NotebookEditor.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Introduction to Photonics 1 24 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/mona_logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Introduction to Photonics 1 24 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
 </div>
-<div class="section" id="Notebook-editor">
-<h1>Notebook editor<a class="headerlink" href="#Notebook-editor" title="Permalink to this headline">¶</a></h1>
-<p><img alt="alt_text" src="../../_images/notebook.png" /></p>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="admonition note">
+<p>This page was generated from <cite>notebooks/Intro/NotebookEditor.ipynb</cite>.
+<span class="raw-html"><br/><a href="https://colab.research.google.com/github/fcichos/Photonics1/blob/master/source/notebooks/Intro/NotebookEditor.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-%20colab-green.svg" style="vertical-align:text-bottom"></a></span>
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/Photonics1.git/master?labpath=source/notebooks/Intro/NotebookEditor.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-%20myBinder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+</div>
+<section id="Notebook-editor">
+<h1>Notebook editor<a class="headerlink" href="#Notebook-editor" title="Permalink to this heading">#</a></h1>
+<img alt="alt_text" src="../../_images/notebook.png" />
 <p>A Jupyter Notebook provides an interface with essentially two modes</p>
 <ul class="simple">
 <li><p><strong>edit mode</strong> the mode where you edit a cells content.</p></li>
 <li><p><strong>command mode</strong> the mode where you execute the cells content.</p></li>
 </ul>
 <p>In the more advanced version of JupyterLab, which we are using on myBinder, this will look like that</p>
-<div class="section" id="Edit-mode">
-<h2>Edit mode<a class="headerlink" href="#Edit-mode" title="Permalink to this headline">¶</a></h2>
+<section id="Edit-mode">
+<h2>Edit mode<a class="headerlink" href="#Edit-mode" title="Permalink to this heading">#</a></h2>
 <p>Edit mode is indicated by a blue cell border and a prompt showing in the editor area:</p>
-<p><img alt="edit_mode" src="../../_images/edit_mode.png" /></p>
+<img alt="edit_mode" src="../../_images/edit_mode.png" />
 <p>When a cell is in edit mode, you can type into the cell, like a normal text editor.</p>
-</div>
-<div class="section" id="Command-mode">
-<h2>Command mode<a class="headerlink" href="#Command-mode" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Command-mode">
+<h2>Command mode<a class="headerlink" href="#Command-mode" title="Permalink to this heading">#</a></h2>
 <p>Command mode is indicated by a grey cell border:</p>
-<p><img alt="command_mode" src="../../_images/command_mode.png" /></p>
-</div>
-<div class="section" id="Keyboard-navigation">
-<h2>Keyboard navigation<a class="headerlink" href="#Keyboard-navigation" title="Permalink to this headline">¶</a></h2>
+<img alt="command_mode" src="../../_images/command_mode.png" />
+</section>
+<section id="Keyboard-navigation">
+<h2>Keyboard navigation<a class="headerlink" href="#Keyboard-navigation" title="Permalink to this heading">#</a></h2>
 <p>If you have a hardware keyboard connected to your iOS device, you can use Jupyter keyboard shortcuts. The modal user interface of the Jupyter Notebook has been optimized for efficient keyboard usage. This is made possible by having two different sets of keyboard shortcuts: one set that is active in edit mode and another in command mode.</p>
 <p>In edit mode, most of the keyboard is dedicated to typing into the cell’s editor. Thus, in edit mode there are relatively few shortcuts. In command mode, the entire keyboard is available for shortcuts, so there are many more. Most important ones are:</p>
 <ol class="arabic simple">
@@ -523,16 +230,15 @@ div.rendered_html tbody tr:hover {
 <li><p>Manipulating cells using pasteboard: <code class="docutils literal notranslate"><span class="pre">x</span></code> for <strong>cut</strong>, <code class="docutils literal notranslate"><span class="pre">c</span></code> for <strong>copy</strong>, <code class="docutils literal notranslate"><span class="pre">v</span></code> for <strong>paste</strong>, <code class="docutils literal notranslate"><span class="pre">d</span></code> for <strong>delete</strong> and <code class="docutils literal notranslate"><span class="pre">z</span></code> for <strong>undo delete</strong></p></li>
 <li><p>Kernel operations: <code class="docutils literal notranslate"><span class="pre">i</span></code> to <strong>interrupt</strong> and <code class="docutils literal notranslate"><span class="pre">0</span></code> to <strong>restart</strong></p></li>
 </ol>
-</div>
-<div class="section" id="Running-code">
-<h2>Running code<a class="headerlink" href="#Running-code" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Running-code">
+<h2>Running code<a class="headerlink" href="#Running-code" title="Permalink to this heading">#</a></h2>
 <p>Code cells allow you to enter and run code. Run a code cell by pressing the <code class="docutils literal notranslate"><span class="pre">▶︎</span></code> button in the bottom-right panel, or <code class="docutils literal notranslate"><span class="pre">Control</span></code>+<code class="docutils literal notranslate"><span class="pre">Enter</span></code> on your hardware keyboard.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
 </div>
 </div>
@@ -540,8 +246,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -559,71 +264,76 @@ div.rendered_html tbody tr:hover {
 <li><p><code class="docutils literal notranslate"><span class="pre">Shift</span></code>+<code class="docutils literal notranslate"><span class="pre">Enter</span></code> runs the current cell and moves selection to the one below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Option</span></code>+<code class="docutils literal notranslate"><span class="pre">Enter</span></code> runs the current cell and inserts a new one below.</p></li>
 </ul>
-</div>
-<div class="section" id="Managing-the-kernel">
-<h2>Managing the kernel<a class="headerlink" href="#Managing-the-kernel" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Managing-the-kernel">
+<h2>Managing the kernel<a class="headerlink" href="#Managing-the-kernel" title="Permalink to this heading">#</a></h2>
 <p>Code is run in a separate process called the <strong>kernel</strong>, which can be interrupted or restarted. You can see kernel indicator in the top-right corner reporting current kernel state: <code class="docutils literal notranslate"><span class="pre">⚪︎</span></code> means kernel is <strong>ready</strong> to execute code, and <code class="docutils literal notranslate"><span class="pre">⚫︎</span></code> means kernel is currently <strong>busy</strong>. Tapping kernel indicator will open <strong>kernel menu</strong>, where you can reconnect, interrupt or restart kernel.</p>
-<p>Try running the following cell — kernel indicator will switch from <code class="docutils literal notranslate"><span class="pre">⚪︎</span></code> to <code class="docutils literal notranslate"><span class="pre">⚫︎</span></code>, i.e. reporting kernel as “busy”. This means that you won’t be able to run any new cells until current execution finishes, or until kernel is interrupted. You can then go to kernel menu by tapping the kernel indicator and select “Interrupt”.</p>
-</div>
-</div>
+<p>Try running the following cell — kernel indicator will switch from <code class="docutils literal notranslate"><span class="pre">⚪︎</span></code> to <code class="docutils literal notranslate"><span class="pre">⚫︎</span></code>, i.e. reporting kernel as “busy”. This means that you won’t be able to run any new cells until current execution finishes, or until kernel is interrupted. You can then go to kernel menu by tapping the kernel indicator and select “Interrupt”.</p>
+</section>
+</section>
 
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="EditCells.html" class="btn btn-neutral float-right" title="Entering code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Introduction2Jupyter.html" class="btn btn-neutral float-left" title="Introduction to Jupyter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
+        </article>
+      </div>
+      <footer>
         
-        &copy; Copyright 2020, Frank Cichos
-      <span class="lastupdated">
-        Last updated on Oct 12, 2020.
-      </span>
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Frank Cichos
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Apr 02, 2024</div>
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Notebook editor</a><ul>
+<li><a class="reference internal" href="#Edit-mode">Edit mode</a></li>
+<li><a class="reference internal" href="#Command-mode">Command mode</a></li>
+<li><a class="reference internal" href="#Keyboard-navigation">Keyboard navigation</a></li>
+<li><a class="reference internal" href="#Running-code">Running code</a></li>
+<li><a class="reference internal" href="#Managing-the-kernel">Managing the kernel</a></li>
+</ul>
+</li>
+</ul>
 
-    </p>
-  </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
+          </div>
         </div>
       </div>
-
-    </section>
-
+      
+      
+    </aside>
   </div>
-  
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
 </html>
