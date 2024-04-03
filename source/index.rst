@@ -7,20 +7,9 @@
 Welcome to the Introduction to Photonics 1!
 ========================================================================
 
-The Python programming language is useful for all kinds of scientific and engineering tasks. You can use it to analyze and plot data. You can also use it to numerically solve scientific problems that are difficult or even impossible to solve analytically. Python is freely available and has been, due to its modular structure, extended with a nearly infinite number of different purpose modules.  
+Photonics is a field of science that is manipulating the flow of light. It contains many facets of research involving light propgation from fundamentals involving light matter interaction to applications involving photonic computing with disordered media or single light quanta to adaptive superresolution microscopy. It is one of the fastest growing fields. 
 
-This course intends to introduce you into the programming with Python. It is aimed more to the beginner but we hope that more advanced users find it interesting as well.
-We will start the course with and introduction to the Jupyter Notebook environment which we will be using throughout the course. Starting from there we will provide some introduction into Python and then show you some basic functionalities, like plotting and analyzing data by curve fitting, reading and writing of files which are some of the tasks you will encounter during your physics studies. We will also show you some more advanced topics of animating inside Jupyter and simulating physical processes in
-
-* mechanics
-* electrostatics
-* waves
-* quantum mechanics
-* optics
-
-At the end of the course we will also add some basic introduction into **machine learning** which is now becoming an important tool even in physics.
-
-We will not present a comprehensive list of numerical simulation schemes, but use the examples to stimulate your curiosity. As there are slight differences in the syntax of different Python versions, we will in the following always refer to **Python 3** standards.
+In this course we will introduce into the field of optics and photonics. We will start with simple but powerful descriptions of light propagation using ray optics to more advanced physics using electromagnetic waves. We will explore Fourier optics, anisotropic media and non-linear optics to lay the foundation to more complex topics in advanced lecture series. 
 
 
 .. toctree::

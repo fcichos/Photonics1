@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="2dfc4d2b18234482bdc06c54c1203020" class="no-scaled-link" src="../../_images/reflection.png" style="width: 400px;" /></p>
+<center><p><img alt="ec6f095ca97949daaf2e92573e3a6aa0" class="no-scaled-link" src="../../_images/reflection.png" style="width: 400px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -346,6 +346,38 @@ y_2=-\frac{z_2}{z_1}y_1
 \frac{x^3}{6} \ll x \quad \rm{or} \quad \frac{x^2}{6} \ll 1 \quad \rm{or} \quad x \ll 0.4\:\:\rm{in~radians}
 \end{equation}</span></p>
 <p>this is not true for microscopy lenses, for example, there we have angles up to 80°, but it is then still a first oder approximation</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
+
+<span class="c1"># Step 2: Create a figure and axes</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># Step 3: Define the arc - center at (0, 0), radius 1, from 0 to 180 degrees</span>
+<span class="n">arc</span> <span class="o">=</span> <span class="n">patches</span><span class="o">.</span><span class="n">Arc</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">theta1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">theta2</span><span class="o">=</span><span class="mi">180</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Add the arc to the axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
+
+<span class="c1"># Optional: Set the aspect of the plot to equal to make the arc look right</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Step 5: Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "4085003b7bc74ec79a707d329f537193", "version_major": 2, "version_minor": 0}</script></div>
+</div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -386,7 +418,7 @@ y_2=-\frac{z_2}{z_1}y_1
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Apr 02, 2024</div>
+              Last updated on Apr 03, 2024</div>
           </div>
           <div class="right-details">
             
