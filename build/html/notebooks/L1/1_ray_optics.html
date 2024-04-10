@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="dd24e1339e384445a0636bfd120d5f9a" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="59882a6793454896b934ed66aab4766c" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="2a21f7b82d1a48e7b2005ef7e19ccf57" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="38b74d216507401c93b185f84008bdba" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -252,7 +252,7 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="cce50a40e6a84e15a951bc111e2b66b7" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="db688009d0044a038072fa3b2ccdea9a" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -380,28 +380,160 @@ y_2=-\frac{z_2}{z_1}y_1
 \frac{x^3}{6} \ll x \quad \rm{or} \quad \frac{x^2}{6} \ll 1 \quad \rm{or} \quad x \ll 0.4\:\:\rm{in~radians}
 \end{equation}</span></p>
 <p>this is not true for microscopy lenses, for example, there we have angles up to 80°, but it is then still a first oder approximation</p>
+</section>
+</section>
+<section id="Aberration-Characterization-and-Zernike-Polynomials">
+<h3>Aberration Characterization and Zernike Polynomials<a class="headerlink" href="#Aberration-Characterization-and-Zernike-Polynomials" title="Permalink to this heading">#</a></h3>
+<p>The Zernike polynomials are a set of orthonormal polynomials that are widely used in optics to describe wavefronts and to characterize optical aberrations. As we did not discuss wavefronts and waves yet, this is a more advanced topic here and only for information. Zernike polynomials are defined over the unit disk and are particularly useful because they are orthogonal under the inner product, which involves integration over the unit circle. This makes them suitable for decomposing a wavefront
+into a sum of orthogonal modes, each representing a different type of aberration.</p>
+<p>The general form of the Zernike polynomials can be expressed in polar coordinates</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[(\rho, \phi)\]</div>
+</div>
+<p>, where</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\rho\]</div>
+</div>
+<p>is the radial distance from the origin (normalized to the unit circle) and</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\phi\]</div>
+</div>
+<p>is the azimuthal angle. The Zernike polynomials are defined as:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}Z_n^m(\rho, \phi) =
+\begin{cases}
+R_n^m(\rho) \cos(m\phi) &amp; \text{for } m \geq 0 \\
+R_n^{|m|}(\rho) \sin(|m|\phi) &amp; \text{for } m &lt; 0
+\end{cases}\end{split}\]</div>
+</div>
+<p>where</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[n\]</div>
+</div>
+<p>is a non-negative integer,</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[m\]</div>
+</div>
+<p>is an integer such that</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[n - |m|\]</div>
+</div>
+<p>is even and</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[0 \leq |m| \leq n\]</div>
+</div>
+<p>, and</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[R_n^m(\rho)\]</div>
+</div>
+<p>is the radial polynomial given by:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[R_n^m(\rho) = \sum_{k=0}^{\frac{n-m}{2}} \frac{(-1)^k (n-k)!}{k! \left(\frac{n+m}{2} - k\right)! \left(\frac{n-m}{2} - k\right)!} \rho^{n-2k}\]</div>
+</div>
+<p>The radial polynomials</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[R_n^m(\rho)\]</div>
+</div>
+<p>are only dependent on the radial distance</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\rho\]</div>
+</div>
+<p>, and they modulate the angular functions</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\cos(m\phi)\]</div>
+</div>
+<p>and</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\sin(|m|\phi)\]</div>
+</div>
+<p>that describe the azimuthal variation of the wavefront.</p>
+<p>The Zernike polynomials are indexed in several ways, with one common method being the Noll index, which provides a single index</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[j\]</div>
+</div>
+<p>to each polynomial. Another method uses the pair</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[(n, m)\]</div>
+</div>
+<p>to index the polynomials, where</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[n\]</div>
+</div>
+<p>indicates the order of the polynomial and</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[m\]</div>
+</div>
+<p>its azimuthal frequency.</p>
+<p>These polynomials are particularly useful in optics and ophthalmology for describing the shape of optical wavefronts and the aberrations of optical systems, including the human eye. They allow for the decomposition of a complex wavefront into simpler, orthogonal components, each corresponding to a specific type of aberration, such as defocus, astigmatism, coma, etc.</p>
+<p>The plots below visualize the Zernike Polynomials up to a certain order.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">radial_polynomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">rho</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the radial component of the Zernike polynomial.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">rho</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="n">n</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">m</span><span class="p">))</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">R</span> <span class="o">+=</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">k</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="o">/</span>
+              <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">((</span><span class="n">n</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">m</span><span class="p">))</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="o">*</span>
+               <span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">((</span><span class="n">n</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">m</span><span class="p">))</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">k</span><span class="p">)))</span> <span class="o">*</span> <span class="n">rho</span><span class="o">**</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">R</span>
 
-<span class="c1"># Step 2: Create a figure and axes</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">zernike_polynomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">phi</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the Zernike polynomial.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">radial_polynomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">rho</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">m</span> <span class="o">*</span> <span class="n">phi</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">radial_polynomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="n">rho</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="o">-</span><span class="n">m</span> <span class="o">*</span> <span class="n">phi</span><span class="p">)</span>
 
-<span class="c1"># Step 3: Define the arc - center at (0, 0), radius 1, from 0 to 180 degrees</span>
-<span class="n">arc</span> <span class="o">=</span> <span class="n">patches</span><span class="o">.</span><span class="n">Arc</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">theta1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">theta2</span><span class="o">=</span><span class="mi">180</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">xx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">yy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">)</span>
 
-<span class="c1"># Step 4: Add the arc to the axes</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="n">rho</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 
-<span class="c1"># Optional: Set the aspect of the plot to equal to make the arc look right</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1"># Step 5: Show the plot</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">axs</span><span class="p">):</span>
+            <span class="k">break</span>
+        <span class="n">Z</span> <span class="o">=</span> <span class="n">zernike_polynomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+        <span class="n">Z</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>  <span class="c1"># Apply mask</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;n=</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1">, m=</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -410,7 +542,7 @@ y_2=-\frac{z_2}{z_1}y_1
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "490db504765b4922b3d41eb091189163", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2dec82e852de49998b3e06005bc2f24a", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -420,7 +552,6 @@ y_2=-\frac{z_2}{z_1}y_1
 </pre></div>
 </div>
 </div>
-</section>
 </section>
 </section>
 </section>
@@ -482,6 +613,7 @@ y_2=-\frac{z_2}{z_1}y_1
 <li><a class="reference internal" href="#Biconvex-Lens">Biconvex Lens</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#Aberration-Characterization-and-Zernike-Polynomials">Aberration Characterization and Zernike Polynomials</a></li>
 </ul>
 </li>
 </ul>
