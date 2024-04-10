@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="ec6f095ca97949daaf2e92573e3a6aa0" class="no-scaled-link" src="../../_images/reflection.png" style="width: 400px;" /></p>
+<center><p><img alt="dd24e1339e384445a0636bfd120d5f9a" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -233,6 +233,16 @@
 </section>
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
+<p>|</p>
+<center><p><img alt="2a21f7b82d1a48e7b2005ef7e19ccf57" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+</center><div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Figure 1:</strong> Law of refraction</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><span class="math">\begin{equation}
 n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 \end{equation}</span></p>
@@ -241,37 +251,59 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <section id="Refraction-on-spherical-boundary">
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
+<p>|</p>
+<center><p><img alt="cce50a40e6a84e15a951bc111e2b66b7" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+</center><div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Figure 1:</strong> Refraction at a spherical surface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>According to the drawing we have the following relation</p>
 <p><span class="math">\begin{equation}-\theta_2+(\pi-\alpha)+\delta=\pi
 \end{equation}</span></p>
+<p>which results in</p>
 <p><span class="math">\begin{equation}
 -\theta_2+\pi-\alpha+\delta=\pi
 \end{equation}</span></p>
+<p>and finally</p>
 <p><span class="math">\begin{equation}
 \delta=\alpha+\theta_2
 \end{equation}</span></p>
+<p>We further can identify the following relations for the angles <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span></p>
 <p><span class="math">\begin{equation}
 \sin(\alpha)=\frac y R,\, \tan(\theta_2)=\frac{y}{z_2},\, \tan(\theta_1)=\frac{y}{z_1}
 \end{equation}</span></p>
+<p>from the radius of curvature of the spherical surface <span class="math notranslate nohighlight">\(R\)</span>, the distance <span class="math notranslate nohighlight">\(y\)</span> where the ray hits the spherical surface and the object point and image point distance <span class="math notranslate nohighlight">\(z_1\)</span> and <span class="math notranslate nohighlight">\(z_2\)</span>.</p>
 <p><span class="math">\begin{equation}
 n_1\sin(\alpha+\theta_1)=n_2\sin(\alpha+\theta_2)
 \end{equation}</span></p>
-<p>linearization: <span class="math notranslate nohighlight">\(\sin(\gamma)\approx \gamma\)</span></p>
+<p>This is a nonlinear equation and difficult to solve. Yet we can just linearize the angular functions just by assuming that all angles are small. This approximation is called the <strong>paraxial approximation</strong> and very important in optics. It not only means that the angle are small, but also that the light rays propagate close to the optical axis.</p>
+<p>Using the linearization: <span class="math notranslate nohighlight">\(\sin(x)\approx x\)</span> we now obtain</p>
 <p><span class="math">\begin{equation}
-n_1(\alpha+\theta_1)=n_2(\alpha+\theta_2)
+n_1(\alpha+\theta_1)=n_2(\alpha-\theta_2)
 \end{equation}</span></p>
-<p><span class="math">\begin{equation}
-n_1\alpha+n_1\theta_1=n_2\alpha+n_2\theta_2
+<p>Expanding the brackets leads to <span class="math">\begin{equation}
+n_1\alpha+n_1\theta_1=n_2\alpha-n_2\theta_2
 \end{equation}</span></p>
+<p>which we can transform into</p>
 <p><span class="math">\begin{equation}
 n_2\theta_2=(n_1-n_2)\alpha+n_1\theta_1
 \end{equation}</span></p>
+<p>to finally obtain</p>
 <p><span class="math">\begin{equation}
 \theta_2=-\frac{n_2-n_1}{n_2}\alpha+\frac{n_1}{n_2}\theta_1
 \end{equation}</span></p>
-<p>replace angles by <span class="math notranslate nohighlight">\(y\)</span> <span class="math">\begin{equation}
+<p>There is still the angle <span class="math notranslate nohighlight">\(\alpha\)</span> we can remove by inserting the corresponding relations we have noted on the top. This leads to</p>
+<p><span class="math">\begin{equation}
 \theta_2\approx \frac{n_1}{n_2}\theta_1-\frac{n_2-n_1}{n_2R}y
 \end{equation}</span></p>
-<p>conjugated planes</p>
+</section>
+<section id="Conjugated-Planes">
+<h4>Conjugated Planes<a class="headerlink" href="#Conjugated-Planes" title="Permalink to this heading">#</a></h4>
+<p>The importance of the result above can be seen from a number of transformations</p>
 <p><span class="math">\begin{equation}
 \frac{\Delta y}{z_2}=\frac{y}{z_1}
 \end{equation}</span></p>
@@ -296,10 +328,12 @@ y\left(\frac{z_2}{z_1}+1\right)=-\frac{n_2-n_1}{n_2R}z_2y, \quad \Delta y=\frac{
 <p><span class="math">\begin{equation}
 \frac{1}{z_1}+\frac{1}{z_2}=-\frac{n_2-n_1}{n_2R}
 \end{equation}</span></p>
-<p>independent of <span class="math notranslate nohighlight">\(y\)</span> <span class="math notranslate nohighlight">\(\Rightarrow\)</span> all <span class="math notranslate nohighlight">\(y\)</span> at <span class="math notranslate nohighlight">\(z_1\)</span> end up in <span class="math notranslate nohighlight">\(z_2\)</span></p>
-<p>conjugated planes means: - there is one point in <span class="math notranslate nohighlight">\(z_1\)</span> which belongs to a point in <span class="math notranslate nohighlight">\(z_2\)</span> - foundation of image formation</p>
-<p>biconvex lens</p>
-<p>apply the formula twice <span class="math">\begin{equation}
+<p>The latter equation is actually already at the level of a single spherical surface showing, that all points from a plane at the location <span class="math notranslate nohighlight">\(z_1\)</span> is imaged to points in a plane <span class="math notranslate nohighlight">\(z_2\)</span>. There is no dependence on the point where the rays hit the spherical surface. The two planes are called <strong>conjugated planes</strong>. They belong together and form the foundation of imaging.</p>
+</section>
+<section id="Biconvex-Lens">
+<h4>Biconvex Lens<a class="headerlink" href="#Biconvex-Lens" title="Permalink to this heading">#</a></h4>
+<p>We can now take the equation for a single spherical surface and derive an expression for two spherical surfaces, which form a lens.</p>
+<p><span class="math">\begin{equation}
 \theta_2=\frac{n_1}{n_2}\theta_1-\frac{n_2-n_1}{n_2R}y
 \end{equation}</span> first refraction, <span class="math notranslate nohighlight">\(n_1=1, n_2=n\)</span></p>
 <p><span class="math">\begin{equation}
@@ -347,7 +381,7 @@ y_2=-\frac{z_2}{z_1}y_1
 \end{equation}</span></p>
 <p>this is not true for microscopy lenses, for example, there we have angles up to 80°, but it is then still a first oder approximation</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -376,7 +410,7 @@ y_2=-\frac{z_2}{z_1}y_1
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "4085003b7bc74ec79a707d329f537193", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "490db504765b4922b3d41eb091189163", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -418,7 +452,7 @@ y_2=-\frac{z_2}{z_1}y_1
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Apr 03, 2024</div>
+              Last updated on Apr 10, 2024</div>
           </div>
           <div class="right-details">
             
@@ -444,6 +478,8 @@ y_2=-\frac{z_2}{z_1}y_1
 <li><a class="reference internal" href="#Law-of-reflection">Law of reflection</a></li>
 <li><a class="reference internal" href="#Law-of-refraction">Law of refraction</a><ul>
 <li><a class="reference internal" href="#Refraction-on-spherical-boundary">Refraction on spherical boundary</a></li>
+<li><a class="reference internal" href="#Conjugated-Planes">Conjugated Planes</a></li>
+<li><a class="reference internal" href="#Biconvex-Lens">Biconvex Lens</a></li>
 </ul>
 </li>
 </ul>
@@ -464,6 +500,7 @@ y_2=-\frac{z_2}{z_1}y_1
     <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
