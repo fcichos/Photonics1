@@ -130,105 +130,24 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 64,
+   "execution_count": 69,
    "id": "fbf42d2d-ba72-4d79-b251-bf343a9c054c",
    "metadata": {
     "tags": []
    },
-   "outputs": [
-    {
-     "data": {
-      "application/javascript": [
-       "    var script = document.createElement('script');\n",
-       "    script.type = 'text/javascript';\n",
-       "    script.src = '//cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js';\n",
-       "    document.head.appendChild(script);\n",
-       "    console.log(window.d3)\n"
-      ],
-      "text/plain": [
-       "<IPython.core.display.Javascript object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
+   "outputs": [],
    "source": [
-    "%%javascript\n",
-    "    var script = document.createElement('script');\n",
-    "    script.type = 'text/javascript';\n",
-    "    script.src = '//cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js';\n",
-    "    document.head.appendChild(script);\n",
-    "    console.log(window.d3)"
+    "from IPython.display import HTML\n",
+    "\n",
+    "def load_d3_in_cell_output():\n",
+    "    display(HTML(\"<script src='https://d3js.org/d3.v6.min.js'></script>\"))\n",
+    "\n",
+    "get_ipython().events.register('pre_run_cell', load_d3_in_cell_output)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 65,
-   "id": "2421f1c4-df62-42a7-bceb-c931fbe26429",
-   "metadata": {
-    "tags": []
-   },
-   "outputs": [
-    {
-     "data": {
-      "application/javascript": [
-       "\n",
-       "var svg = d3.select(element)\n",
-       "    .append(\"svg\")\n",
-       "    .attr(\"width\", 300)\n",
-       "    .attr(\"height\", 300);    \n",
-       "\n",
-       "svg.append(\"circle\")\n",
-       "    .style(\"stroke\", \"gray\")\n",
-       "    .style(\"fill\", \"cyan\")\n",
-       "    .attr(\"r\", 130)\n",
-       "    .attr(\"cx\", 150)\n",
-       "    .attr(\"cy\", 150)\n",
-       "    .transition()\n",
-       "        .delay(100)\n",
-       "        .duration(10000)  \n",
-       "        .attr(\"r\", 10)\n",
-       "        .attr(\"cx\", 150)\n",
-       "        .style(\"fill\", \"blue\"); \n"
-      ],
-      "text/plain": [
-       "<IPython.core.display.Javascript object>"
-      ]
-     },
-     "execution_count": 65,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "from IPython.display import Javascript\n",
-    "svg_script = '''\n",
-    "var svg = d3.select(element)\n",
-    "    .append(\"svg\")\n",
-    "    .attr(\"width\", 300)\n",
-    "    .attr(\"height\", 300);    \n",
-    "\n",
-    "svg.append(\"circle\")\n",
-    "    .style(\"stroke\", \"gray\")\n",
-    "    .style(\"fill\", \"cyan\")\n",
-    "    .attr(\"r\", 130)\n",
-    "    .attr(\"cx\", 150)\n",
-    "    .attr(\"cy\", 150)\n",
-    "    .transition()\n",
-    "        .delay(100)\n",
-    "        .duration(10000)  \n",
-    "        .attr(\"r\", 10)\n",
-    "        .attr(\"cx\", 150)\n",
-    "        .style(\"fill\", \"blue\"); \n",
-    "'''\n",
-    "\n",
-    "Javascript(svg_script)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 63,
+   "execution_count": 70,
    "id": "a7043a8d-8a5a-4b0a-9ec3-3c61e77665b1",
    "metadata": {
     "tags": []
@@ -237,14 +156,39 @@
     {
      "data": {
       "text/html": [
-       "\n",
-       "<button id=\"myButton\">Click Me!</button>\n",
-       "<script type=\"text/Javascript\">\n",
-       "    function handleButtonClick() {\n",
-       "        alert('Button was clicked!');\n",
-       "    }\n",
+       "<script src='https://d3js.org/d3.v6.min.js'></script>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<div id=\"d3-container\"></div>\n",
+       "<script>\n",
+       "// Ensure D3.js is loaded\n",
+       "if (d3) {\n",
+       "    // Select the container\n",
+       "    var container = d3.select(\"#d3-container\");\n",
        "    \n",
-       "    document.getElementById('myButton').addEventListener('click', handleButtonClick);\n",
+       "    // Append an SVG element to the container\n",
+       "    var svg = container.append(\"svg\")\n",
+       "        .attr(\"width\", 200)\n",
+       "        .attr(\"height\", 200);\n",
+       "    \n",
+       "    // Append a circle to the SVG element\n",
+       "    svg.append(\"circle\")\n",
+       "        .attr(\"cx\", 100)\n",
+       "        .attr(\"cy\", 100)\n",
+       "        .attr(\"r\", 50)\n",
+       "        .style(\"fill\", \"blue\");\n",
+       "} else {\n",
+       "    console.error(\"D3.js is not loaded\");\n",
+       "}\n",
        "</script>\n"
       ],
       "text/plain": [
@@ -256,22 +200,29 @@
     }
    ],
    "source": [
-    "from IPython.display import display, HTML, Javascript\n",
-    "\n",
-    "# Define the HTML and JavaScript code\n",
-    "html_code = \"\"\"\n",
-    "<button id=\"myButton\">Click Me!</button>\n",
-    "<script type=\"text/Javascript\">\n",
-    "    function handleButtonClick() {\n",
-    "        alert('Button was clicked!');\n",
-    "    }\n",
+    "%%html\n",
+    "<div id=\"d3-container\"></div>\n",
+    "<script>\n",
+    "// Ensure D3.js is loaded\n",
+    "if (d3) {\n",
+    "    // Select the container\n",
+    "    var container = d3.select(\"#d3-container\");\n",
     "    \n",
-    "    document.getElementById('myButton').addEventListener('click', handleButtonClick);\n",
-    "</script>\n",
-    "\"\"\"\n",
-    "\n",
-    "# Display the HTML in the JupyterLab notebook\n",
-    "display(HTML(html_code))"
+    "    // Append an SVG element to the container\n",
+    "    var svg = container.append(\"svg\")\n",
+    "        .attr(\"width\", 200)\n",
+    "        .attr(\"height\", 200);\n",
+    "    \n",
+    "    // Append a circle to the SVG element\n",
+    "    svg.append(\"circle\")\n",
+    "        .attr(\"cx\", 100)\n",
+    "        .attr(\"cy\", 100)\n",
+    "        .attr(\"r\", 50)\n",
+    "        .style(\"fill\", \"blue\");\n",
+    "} else {\n",
+    "    console.error(\"D3.js is not loaded\");\n",
+    "}\n",
+    "</script>"
    ]
   },
   {

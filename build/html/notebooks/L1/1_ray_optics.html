@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="55f9f7eab2ac446d9f2d57f90a5508ba" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="a37359da03954f5ca53750e752b945cd" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="5afae4cd86584200baedd844a16c4fdc" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="71f393295ef144ac829e137212207e3d" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -248,133 +248,87 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 \end{equation}</span></p>
 <p>The law of refraction is known as Snell’s law and relates the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> with the angle of the refracted ray <span class="math notranslate nohighlight">\(\theta_2\)</span>.</p>
 <p>With this law of refraction, there are a number of special situations, that occur. This is for example the total internal refraction. You can explore different situations with the short program below which gives you control over the refractive indices and the incident angles.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="k">def</span> <span class="nf">load_d3_in_cell_output</span><span class="p">():</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;script src=&#39;https://d3js.org/d3.v6.min.js&#39;&gt;&lt;/script&gt;&quot;</span><span class="p">))</span>
+
+<span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;pre_run_cell&#39;</span><span class="p">,</span> <span class="n">load_d3_in_cell_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
-<div class="input_area highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="nx">javascript</span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">script</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;//cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">d3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;d3-container&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="c1">// Ensure D3.js is loaded</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">d3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Select the container</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s2">&quot;#d3-container&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Append an SVG element to the container</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">svg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">container</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;svg&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Append a circle to the SVG element</span>
+<span class="w">    </span><span class="nx">svg</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;cx&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;cy&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;blue&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;D3.js is not loaded&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
-<div class="output_javascript"></div>
-<script type="text/javascript">
-var element = document.currentScript.previousSibling.previousSibling;
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = '//cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js';
-    document.head.appendChild(script);
-    console.log(window.d3)
-
-</script></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Javascript</span>
-<span class="n">svg_script</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">var svg = d3.select(element)</span>
-<span class="s1">    .append(&quot;svg&quot;)</span>
-<span class="s1">    .attr(&quot;width&quot;, 300)</span>
-<span class="s1">    .attr(&quot;height&quot;, 300);</span>
-
-<span class="s1">svg.append(&quot;circle&quot;)</span>
-<span class="s1">    .style(&quot;stroke&quot;, &quot;gray&quot;)</span>
-<span class="s1">    .style(&quot;fill&quot;, &quot;cyan&quot;)</span>
-<span class="s1">    .attr(&quot;r&quot;, 130)</span>
-<span class="s1">    .attr(&quot;cx&quot;, 150)</span>
-<span class="s1">    .attr(&quot;cy&quot;, 150)</span>
-<span class="s1">    .transition()</span>
-<span class="s1">        .delay(100)</span>
-<span class="s1">        .duration(10000)</span>
-<span class="s1">        .attr(&quot;r&quot;, 10)</span>
-<span class="s1">        .attr(&quot;cx&quot;, 150)</span>
-<span class="s1">        .style(&quot;fill&quot;, &quot;blue&quot;);</span>
-<span class="s1">&#39;&#39;&#39;</span>
-
-<span class="n">Javascript</span><span class="p">(</span><span class="n">svg_script</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="output_javascript"></div>
-<script type="text/javascript">
-var element = document.currentScript.previousSibling.previousSibling;
-
-var svg = d3.select(element)
-    .append("svg")
-    .attr("width", 300)
-    .attr("height", 300);
-
-svg.append("circle")
-    .style("stroke", "gray")
-    .style("fill", "cyan")
-    .attr("r", 130)
-    .attr("cx", 150)
-    .attr("cy", 150)
-    .transition()
-        .delay(100)
-        .duration(10000)
-        .attr("r", 10)
-        .attr("cx", 150)
-        .style("fill", "blue");
-
-</script></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Javascript</span>
-
-<span class="c1"># Define the HTML and JavaScript code</span>
-<span class="n">html_code</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">&lt;button id=&quot;myButton&quot;&gt;Click Me!&lt;/button&gt;</span>
-<span class="s2">&lt;script type=&quot;text/Javascript&quot;&gt;</span>
-<span class="s2">    function handleButtonClick() {</span>
-<span class="s2">        alert(&#39;Button was clicked!&#39;);</span>
-<span class="s2">    }</span>
-
-<span class="s2">    document.getElementById(&#39;myButton&#39;).addEventListener(&#39;click&#39;, handleButtonClick);</span>
-<span class="s2">&lt;/script&gt;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="c1"># Display the HTML in the JupyterLab notebook</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">))</span>
-</pre></div>
-</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<button id="myButton">Click Me!</button>
-<script type="text/Javascript">
-    function handleButtonClick() {
-        alert('Button was clicked!');
-    }
+<div id="d3-container"></div>
+<script>
+// Ensure D3.js is loaded
+if (d3) {
+    // Select the container
+    var container = d3.select("#d3-container");
 
-    document.getElementById('myButton').addEventListener('click', handleButtonClick);
+    // Append an SVG element to the container
+    var svg = container.append("svg")
+        .attr("width", 200)
+        .attr("height", 200);
+
+    // Append a circle to the SVG element
+    svg.append("circle")
+        .attr("cx", 100)
+        .attr("cy", 100)
+        .attr("r", 50)
+        .style("fill", "blue");
+} else {
+    console.error("D3.js is not loaded");
+}
 </script></div>
 </div>
 <section id="Refraction-on-spherical-boundary">
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="781fa72eb92546c288c4863be908a523" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="cda6e1a947b14df6bc00858b53c7b55c" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -663,7 +617,7 @@ R_n^{|m|}(\rho) \sin(|m|\phi) &amp; \text{for } m &lt; 0
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_27_0.png" src="../../_images/notebooks_L1_1_ray_optics_27_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_26_0.png" src="../../_images/notebooks_L1_1_ray_optics_26_0.png" />
 </div>
 </div>
 </section>
@@ -719,7 +673,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_30_0.png" src="../../_images/notebooks_L1_1_ray_optics_30_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_29_0.png" src="../../_images/notebooks_L1_1_ray_optics_29_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -737,7 +691,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_31_0.png" src="../../_images/notebooks_L1_1_ray_optics_31_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_30_0.png" src="../../_images/notebooks_L1_1_ray_optics_30_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
