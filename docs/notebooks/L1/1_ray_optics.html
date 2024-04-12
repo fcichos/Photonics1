@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="aac225b3eca74f0bb33ce989fda2deda" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="9c5791d8f5394475899dc12ef3dd1050" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="2698f2eb6e934a9bb5f8742afaa3de2e" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="e26041b4df204d1c96d652eb9bbb62c9" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -249,7 +249,7 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <p>The law of refraction is known as Snell’s law and relates the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> with the angle of the refracted ray <span class="math notranslate nohighlight">\(\theta_2\)</span>.</p>
 <p>With this law of refraction, there are a number of special situations, that occur. This is for example the total internal refraction. You can explore different situations with the short program below which gives you control over the refractive indices and the incident angles.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[105]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
@@ -297,130 +297,118 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <div class="output_area rendered_html docutils container">
 <script src='https://d3js.org/d3.v6.min.js'></script></div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">FloatSlider</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Javascript</span>
-
-<span class="c1"># Define the function to update the circle radius</span>
-<span class="k">def</span> <span class="nf">update_circle_radius</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">        (function() </span><span class="se">{{</span>
-<span class="s2">            var circle = d3.select(&quot;#d3-circle&quot;);</span>
-<span class="s2">            if(circle) circle.attr(&quot;r&quot;, </span><span class="si">{</span><span class="n">radius</span><span class="si">}</span><span class="s2">);</span>
-<span class="s2">        </span><span class="se">}}</span><span class="s2">)();</span>
-<span class="s2">    &quot;&quot;&quot;</span><span class="p">))</span>
-
-<span class="c1"># Create the slider widget</span>
-<span class="n">slider</span> <span class="o">=</span> <span class="n">FloatSlider</span><span class="p">(</span>
-    <span class="n">value</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-    <span class="nb">min</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-    <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-    <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Radius:&#39;</span><span class="p">,</span>
-    <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span>
-<span class="p">)</span>
-
-<span class="c1"># Display the slider and pass the update function as the callback</span>
-<span class="n">interact</span><span class="p">(</span><span class="n">update_circle_radius</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="n">slider</span><span class="p">)</span>
-
-<span class="c1"># Define the HTML and JavaScript code for the initial D3.js circle</span>
-<span class="n">html_code</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">&lt;div id=&quot;d3-container&quot;&gt;&lt;/div&gt;</span>
-<span class="s2">&lt;script src=&quot;https://d3js.org/d3.v6.min.js&quot;&gt;&lt;/script&gt;</span>
-<span class="s2">&lt;script&gt;</span>
-<span class="s2">    var container = d3.select(&quot;#d3-container&quot;);</span>
-<span class="s2">    var svg = container.append(&quot;svg&quot;)</span>
-<span class="s2">        .attr(&quot;width&quot;, 200)</span>
-<span class="s2">        .attr(&quot;height&quot;, 200);</span>
-<span class="s2">    svg.append(&quot;circle&quot;)</span>
-<span class="s2">        .attr(&quot;id&quot;, &quot;d3-circle&quot;)</span>
-<span class="s2">        .attr(&quot;cx&quot;, 100)</span>
-<span class="s2">        .attr(&quot;cy&quot;, 100)</span>
-<span class="s2">        .attr(&quot;r&quot;, 50)</span>
-<span class="s2">        .style(&quot;fill&quot;, &quot;blue&quot;);</span>
-<span class="s2">&lt;/script&gt;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="c1"># Display the initial D3.js circle</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script src='https://d3js.org/d3.v6.min.js'></script></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script src='https://d3js.org/d3.v6.min.js'></script></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script src='https://d3js.org/d3.v6.min.js'></script></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script src='https://d3js.org/d3.v6.min.js'></script></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script src='https://d3js.org/d3.v6.min.js'></script></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script src='https://d3js.org/d3.v6.min.js'></script></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script src='https://d3js.org/d3.v6.min.js'></script></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "81c9708e657a43299356d6d746905d25", "version_major": 2, "version_minor": 0}</script></div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<div id="d3-container"></div>
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div id=&quot;animation-container&quot;&gt;&lt;/div&gt;</span>
+<span class="s2">&lt;script src=&quot;https://d3js.org/d3.v6.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class="s2">&lt;script&gt;</span>
+<span class="s2">    var svg = d3.select(&quot;#animation-container&quot;).append(&quot;svg&quot;)</span>
+<span class="s2">        .attr(&quot;width&quot;, 400)</span>
+<span class="s2">        .attr(&quot;height&quot;, 200);</span>
+
+<span class="s2">    var circle = svg.append(&quot;circle&quot;)</span>
+<span class="s2">        .attr(&quot;cx&quot;, 20)</span>
+<span class="s2">        .attr(&quot;cy&quot;, 100)</span>
+<span class="s2">        .attr(&quot;r&quot;, 20)</span>
+<span class="s2">        .style(&quot;fill&quot;, &quot;steelblue&quot;);</span>
+
+<span class="s2">    circle.transition()</span>
+<span class="s2">        .duration(2000)</span>
+<span class="s2">        .attr(&quot;cx&quot;, 380)</span>
+<span class="s2">        .on(&quot;end&quot;, function() { d3.select(this).style(&quot;fill&quot;, &quot;tomato&quot;); });</span>
+<span class="s2">&lt;/script&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div id="animation-container"></div>
 <script src="https://d3js.org/d3.v6.min.js"></script>
 <script>
-    var container = d3.select("#d3-container");
-    var svg = container.append("svg")
-        .attr("width", 200)
+    var svg = d3.select("#animation-container").append("svg")
+        .attr("width", 400)
         .attr("height", 200);
-    svg.append("circle")
-        .attr("id", "d3-circle")
-        .attr("cx", 100)
+
+    var circle = svg.append("circle")
+        .attr("cx", 20)
         .attr("cy", 100)
-        .attr("r", 50)
-        .style("fill", "blue");
+        .attr("r", 20)
+        .style("fill", "steelblue");
+
+    circle.transition()
+        .duration(2000)
+        .attr("cx", 380)
+        .on("end", function() { d3.select(this).style("fill", "tomato"); });
 </script></div>
 </div>
 <section id="Refraction-on-spherical-boundary">
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="558c811cefab402b83315df907d7f0a8" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="89925adeb55c4ece80adf34ae8bb1f33" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
