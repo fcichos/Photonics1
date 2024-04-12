@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="a37359da03954f5ca53750e752b945cd" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="74410a67b2534d4f9009329c90514572" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="71f393295ef144ac829e137212207e3d" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="5dacb075f2f74b528d720d4a439a7650" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -248,8 +248,8 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 \end{equation}</span></p>
 <p>The law of refraction is known as Snell’s law and relates the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> with the angle of the refracted ray <span class="math notranslate nohighlight">\(\theta_2\)</span>.</p>
 <p>With this law of refraction, there are a number of special situations, that occur. This is for example the total internal refraction. You can explore different situations with the short program below which gives you control over the refractive indices and the incident angles.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
@@ -261,8 +261,26 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
@@ -275,7 +293,7 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 
 <span class="w">    </span><span class="c1">// Append an SVG element to the container</span>
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">svg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">container</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;svg&quot;</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">400</span><span class="p">)</span>
 <span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// Append a circle to the SVG element</span>
@@ -284,12 +302,36 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;cy&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span>
 <span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span>
 <span class="w">        </span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;blue&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">circle</span><span class="p">.</span><span class="nx">transition</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">duration</span><span class="p">(</span><span class="mf">10000</span><span class="p">)</span><span class="w"> </span><span class="c1">// 2 seconds</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;cx&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">290</span><span class="p">)</span><span class="w"> </span><span class="c1">// End at the right side</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">ease</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">easeLinear</span><span class="p">);</span><span class="w"> </span><span class="c1">// Use a linear easing function</span>
+
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;D3.js is not loaded&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
@@ -310,7 +352,7 @@ if (d3) {
 
     // Append an SVG element to the container
     var svg = container.append("svg")
-        .attr("width", 200)
+        .attr("width", 400)
         .attr("height", 200);
 
     // Append a circle to the SVG element
@@ -319,6 +361,12 @@ if (d3) {
         .attr("cy", 100)
         .attr("r", 50)
         .style("fill", "blue");
+
+    circle.transition()
+        .duration(10000) // 2 seconds
+        .attr("cx", 290) // End at the right side
+        .ease(d3.easeLinear); // Use a linear easing function
+
 } else {
     console.error("D3.js is not loaded");
 }
@@ -328,7 +376,7 @@ if (d3) {
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="cda6e1a947b14df6bc00858b53c7b55c" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="05c275b8a6104130aadb74549604e00e" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>

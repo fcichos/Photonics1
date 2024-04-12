@@ -130,12 +130,49 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 69,
+   "execution_count": 89,
    "id": "fbf42d2d-ba72-4d79-b251-bf343a9c054c",
    "metadata": {
     "tags": []
    },
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<script src='https://d3js.org/d3.v6.min.js'></script>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<script src='https://d3js.org/d3.v6.min.js'></script>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<script src='https://d3js.org/d3.v6.min.js'></script>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
    "source": [
     "from IPython.display import HTML\n",
     "\n",
@@ -147,12 +184,48 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 70,
+   "execution_count": 92,
    "id": "a7043a8d-8a5a-4b0a-9ec3-3c61e77665b1",
    "metadata": {
     "tags": []
    },
    "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<script src='https://d3js.org/d3.v6.min.js'></script>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<script src='https://d3js.org/d3.v6.min.js'></script>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<script src='https://d3js.org/d3.v6.min.js'></script>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
     {
      "data": {
       "text/html": [
@@ -177,7 +250,7 @@
        "    \n",
        "    // Append an SVG element to the container\n",
        "    var svg = container.append(\"svg\")\n",
-       "        .attr(\"width\", 200)\n",
+       "        .attr(\"width\", 400)\n",
        "        .attr(\"height\", 200);\n",
        "    \n",
        "    // Append a circle to the SVG element\n",
@@ -186,6 +259,12 @@
        "        .attr(\"cy\", 100)\n",
        "        .attr(\"r\", 50)\n",
        "        .style(\"fill\", \"blue\");\n",
+       "    \n",
+       "    circle.transition()\n",
+       "        .duration(10000) // 2 seconds\n",
+       "        .attr(\"cx\", 290) // End at the right side\n",
+       "        .ease(d3.easeLinear); // Use a linear easing function\n",
+       "    \n",
        "} else {\n",
        "    console.error(\"D3.js is not loaded\");\n",
        "}\n",
@@ -210,7 +289,7 @@
     "    \n",
     "    // Append an SVG element to the container\n",
     "    var svg = container.append(\"svg\")\n",
-    "        .attr(\"width\", 200)\n",
+    "        .attr(\"width\", 400)\n",
     "        .attr(\"height\", 200);\n",
     "    \n",
     "    // Append a circle to the SVG element\n",
@@ -219,6 +298,12 @@
     "        .attr(\"cy\", 100)\n",
     "        .attr(\"r\", 50)\n",
     "        .style(\"fill\", \"blue\");\n",
+    "    \n",
+    "    circle.transition()\n",
+    "        .duration(10000) // 2 seconds\n",
+    "        .attr(\"cx\", 290) // End at the right side\n",
+    "        .ease(d3.easeLinear); // Use a linear easing function\n",
+    "    \n",
     "} else {\n",
     "    console.error(\"D3.js is not loaded\");\n",
     "}\n",
