@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="1125cffdd17a458787b15f43e3c9ba39" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="55f9f7eab2ac446d9f2d57f90a5508ba" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="5e57c22b24e34e028a14cb97810bfe4a" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="5afae4cd86584200baedd844a16c4fdc" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -248,6 +248,92 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 \end{equation}</span></p>
 <p>The law of refraction is known as Snell’s law and relates the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> with the angle of the refracted ray <span class="math notranslate nohighlight">\(\theta_2\)</span>.</p>
 <p>With this law of refraction, there are a number of special situations, that occur. This is for example the total internal refraction. You can explore different situations with the short program below which gives you control over the refractive indices and the incident angles.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+</pre></div>
+</div>
+<div class="input_area highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="nx">javascript</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">script</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;//cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">d3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="output_javascript"></div>
+<script type="text/javascript">
+var element = document.currentScript.previousSibling.previousSibling;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '//cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js';
+    document.head.appendChild(script);
+    console.log(window.d3)
+
+</script></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Javascript</span>
+<span class="n">svg_script</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">var svg = d3.select(element)</span>
+<span class="s1">    .append(&quot;svg&quot;)</span>
+<span class="s1">    .attr(&quot;width&quot;, 300)</span>
+<span class="s1">    .attr(&quot;height&quot;, 300);</span>
+
+<span class="s1">svg.append(&quot;circle&quot;)</span>
+<span class="s1">    .style(&quot;stroke&quot;, &quot;gray&quot;)</span>
+<span class="s1">    .style(&quot;fill&quot;, &quot;cyan&quot;)</span>
+<span class="s1">    .attr(&quot;r&quot;, 130)</span>
+<span class="s1">    .attr(&quot;cx&quot;, 150)</span>
+<span class="s1">    .attr(&quot;cy&quot;, 150)</span>
+<span class="s1">    .transition()</span>
+<span class="s1">        .delay(100)</span>
+<span class="s1">        .duration(10000)</span>
+<span class="s1">        .attr(&quot;r&quot;, 10)</span>
+<span class="s1">        .attr(&quot;cx&quot;, 150)</span>
+<span class="s1">        .style(&quot;fill&quot;, &quot;blue&quot;);</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">Javascript</span><span class="p">(</span><span class="n">svg_script</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="output_javascript"></div>
+<script type="text/javascript">
+var element = document.currentScript.previousSibling.previousSibling;
+
+var svg = d3.select(element)
+    .append("svg")
+    .attr("width", 300)
+    .attr("height", 300);
+
+svg.append("circle")
+    .style("stroke", "gray")
+    .style("fill", "cyan")
+    .attr("r", 130)
+    .attr("cx", 150)
+    .attr("cy", 150)
+    .transition()
+        .delay(100)
+        .duration(10000)
+        .attr("r", 10)
+        .attr("cx", 150)
+        .style("fill", "blue");
+
+</script></div>
+</div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
@@ -288,7 +374,7 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="ada3e5bcc93544daa9b5115e2b1d5acf" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="781fa72eb92546c288c4863be908a523" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -577,7 +663,7 @@ R_n^{|m|}(\rho) \sin(|m|\phi) &amp; \text{for } m &lt; 0
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_25_0.png" src="../../_images/notebooks_L1_1_ray_optics_25_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_27_0.png" src="../../_images/notebooks_L1_1_ray_optics_27_0.png" />
 </div>
 </div>
 </section>
@@ -633,7 +719,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_28_0.png" src="../../_images/notebooks_L1_1_ray_optics_28_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_30_0.png" src="../../_images/notebooks_L1_1_ray_optics_30_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -651,7 +737,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_29_0.png" src="../../_images/notebooks_L1_1_ray_optics_29_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_31_0.png" src="../../_images/notebooks_L1_1_ray_optics_31_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
