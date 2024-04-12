@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="bac1cc1124044395ac6eb363bb3db2b8" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="7e13d3738d2a48c292c33461a2887358" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="fc7f6914b9c04f9b82f8d79799eed72f" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="1e46b4143661470a99547d466be8d0f1" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -248,11 +248,54 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 \end{equation}</span></p>
 <p>The law of refraction is known as Snell’s law and relates the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> with the angle of the refracted ray <span class="math notranslate nohighlight">\(\theta_2\)</span>.</p>
 <p>With this law of refraction, there are a number of special situations, that occur. This is for example the total internal refraction. You can explore different situations with the short program below which gives you control over the refractive indices and the incident angles.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="c1"># Define the HTML string with embedded JavaScript for drawing</span>
+<span class="n">html_code</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid #000000;&quot;&gt;</span>
+<span class="s2">Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;</span>
+
+<span class="s2">&lt;script&gt;</span>
+<span class="s2">var c = document.getElementById(&quot;myCanvas&quot;);</span>
+<span class="s2">var ctx = c.getContext(&quot;2d&quot;);</span>
+
+<span class="s2">// Draw a blue rectangle</span>
+<span class="s2">ctx.fillStyle = &quot;#0000FF&quot;;</span>
+<span class="s2">ctx.fillRect(10, 10, 150, 80);</span>
+<span class="s2">&lt;/script&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Display the HTML in the JupyterLab notebook</span>
+<span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Draw a blue rectangle
+ctx.fillStyle = "#0000FF";
+ctx.fillRect(10, 10, 150, 80);
+</script></div>
+</div>
 <section id="Refraction-on-spherical-boundary">
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="cc2f57bf710b440a9b552426eeefece6" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="933bd2b6a78b4ea6928ba92662c2ad53" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -541,7 +584,7 @@ R_n^{|m|}(\rho) \sin(|m|\phi) &amp; \text{for } m &lt; 0
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_24_0.png" src="../../_images/notebooks_L1_1_ray_optics_24_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_25_0.png" src="../../_images/notebooks_L1_1_ray_optics_25_0.png" />
 </div>
 </div>
 </section>
@@ -597,7 +640,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_27_0.png" src="../../_images/notebooks_L1_1_ray_optics_27_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_28_0.png" src="../../_images/notebooks_L1_1_ray_optics_28_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -615,7 +658,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_28_0.png" src="../../_images/notebooks_L1_1_ray_optics_28_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_29_0.png" src="../../_images/notebooks_L1_1_ray_optics_29_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -658,7 +701,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Apr 10, 2024</div>
+              Last updated on Apr 12, 2024</div>
           </div>
           <div class="right-details">
             

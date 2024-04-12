@@ -14,7 +14,7 @@ help:
 .PHONY: help Makefile
 
 github:
-#	@find /home/lectures/Photonics1/source/notebooks -name "*.ipynb" -exec jupyter nbconvert {} --to pdf \;
+	@find /home/lectures/Photonics1/source/notebooks -name "*.ipynb" -exec jupyter nbconvert {} --to pdf \;
 	@make html
 	@cp -a build/html/. ./docs
 
