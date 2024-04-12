@@ -133,7 +133,6 @@
    "execution_count": 63,
    "id": "a7043a8d-8a5a-4b0a-9ec3-3c61e77665b1",
    "metadata": {
-    "nbsphinx": "hidden",
     "tags": []
    },
    "outputs": [

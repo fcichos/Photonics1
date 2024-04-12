@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="d96658f2ed284707b98bb3c9f3062eea" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="1125cffdd17a458787b15f43e3c9ba39" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="0f3d76cd81e2467bb38facf492895edc" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="5e57c22b24e34e028a14cb97810bfe4a" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -248,11 +248,47 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 \end{equation}</span></p>
 <p>The law of refraction is known as Snell’s law and relates the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> with the angle of the refracted ray <span class="math notranslate nohighlight">\(\theta_2\)</span>.</p>
 <p>With this law of refraction, there are a number of special situations, that occur. This is for example the total internal refraction. You can explore different situations with the short program below which gives you control over the refractive indices and the incident angles.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Javascript</span>
+
+<span class="c1"># Define the HTML and JavaScript code</span>
+<span class="n">html_code</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;button id=&quot;myButton&quot;&gt;Click Me!&lt;/button&gt;</span>
+<span class="s2">&lt;script type=&quot;text/Javascript&quot;&gt;</span>
+<span class="s2">    function handleButtonClick() {</span>
+<span class="s2">        alert(&#39;Button was clicked!&#39;);</span>
+<span class="s2">    }</span>
+
+<span class="s2">    document.getElementById(&#39;myButton&#39;).addEventListener(&#39;click&#39;, handleButtonClick);</span>
+<span class="s2">&lt;/script&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Display the HTML in the JupyterLab notebook</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_code</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<button id="myButton">Click Me!</button>
+<script type="text/Javascript">
+    function handleButtonClick() {
+        alert('Button was clicked!');
+    }
+
+    document.getElementById('myButton').addEventListener('click', handleButtonClick);
+</script></div>
+</div>
 <section id="Refraction-on-spherical-boundary">
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="761976ae730b439c933c5aed2a60baf9" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="ada3e5bcc93544daa9b5115e2b1d5acf" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
