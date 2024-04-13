@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="1a81a5fb70514a71bc1b308627e451e4" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="debd52c525d248b9a12b08880460e4f5" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="1a5acdd8f3454d89a5d9d6261b273edf" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="c18a4bd334844d4491ff9adb4be1cce6" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -303,11 +303,202 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <div class="output_area rendered_html docutils container">
 <script src='https://d3js.org/d3.v6.min.js'></script></div>
 </div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div id=&quot;animation-container&quot;&gt;&lt;/div&gt;</span>
+<span class="s2">&lt;script src=&quot;https://d3js.org/d3.v6.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class="s2">&lt;script&gt;</span>
+<span class="s2">    var svg = d3.select(&quot;#animation-container&quot;).append(&quot;svg&quot;)</span>
+<span class="s2">        .attr(&quot;width&quot;, 400)</span>
+<span class="s2">        .attr(&quot;height&quot;, 200);</span>
+
+<span class="s2">    var circle = svg.append(&quot;circle&quot;)</span>
+<span class="s2">        .attr(&quot;cx&quot;, 20)</span>
+<span class="s2">        .attr(&quot;cy&quot;, 100)</span>
+<span class="s2">        .attr(&quot;r&quot;, 20)</span>
+<span class="s2">        .style(&quot;fill&quot;, &quot;steelblue&quot;);</span>
+
+<span class="s2">    circle.transition()</span>
+<span class="s2">        .duration(2000)</span>
+<span class="s2">        .attr(&quot;cx&quot;, 380)</span>
+<span class="s2">        .on(&quot;end&quot;, function() { d3.select(this).style(&quot;fill&quot;, &quot;tomato&quot;); });</span>
+<span class="s2">&lt;/script&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div id="animation-container"></div>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script>
+    var svg = d3.select("#animation-container").append("svg")
+        .attr("width", 400)
+        .attr("height", 200);
+
+    var circle = svg.append("circle")
+        .attr("cx", 20)
+        .attr("cy", 100)
+        .attr("r", 20)
+        .style("fill", "steelblue");
+
+    circle.transition()
+        .duration(2000)
+        .attr("cx", 380)
+        .on("end", function() { d3.select(this).style("fill", "tomato"); });
+</script></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Javascript</span>
+
+<span class="c1"># Define HTML for the slider and a script to handle the slider&#39;s value changes</span>
+<span class="n">html_slider</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div&gt;</span>
+<span class="s2">    &lt;input type=&quot;range&quot; id=&quot;mySlider&quot; name=&quot;mySlider&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;50&quot; oninput=&quot;sliderOutput.value = mySlider.value&quot;&gt;</span>
+<span class="s2">    &lt;output id=&quot;sliderOutput&quot;&gt;50&lt;/output&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&lt;script&gt;</span>
+<span class="s2">document.getElementById(&quot;mySlider&quot;).oninput = function() {</span>
+<span class="s2">    // This function is called whenever the slider value changes.</span>
+<span class="s2">    // You can add custom logic here to handle the value change.</span>
+<span class="s2">    console.log(&quot;Slider value:&quot;, this.value);</span>
+<span class="s2">};</span>
+<span class="s2">&lt;/script&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Display the slider in the notebook</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_slider</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+    <input type="range" id="mySlider" name="mySlider" min="0" max="100" value="50" oninput="sliderOutput.value = mySlider.value">
+    <output id="sliderOutput">50</output>
+</div>
+<script>
+document.getElementById("mySlider").oninput = function() {
+    // This function is called whenever the slider value changes.
+    // You can add custom logic here to handle the value change.
+    console.log("Slider value:", this.value);
+};
+</script></div>
+</div>
 <section id="Refraction-on-spherical-boundary">
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="2c47eebb8c9e4366aa3f6aa262ed4ea2" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="6fe11bfce9e441cfa1d03ba28ab345e1" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -596,7 +787,7 @@ R_n^{|m|}(\rho) \sin(|m|\phi) &amp; \text{for } m &lt; 0
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_26_0.png" src="../../_images/notebooks_L1_1_ray_optics_26_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_27_0.png" src="../../_images/notebooks_L1_1_ray_optics_27_0.png" />
 </div>
 </div>
 </section>
@@ -652,7 +843,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_29_0.png" src="../../_images/notebooks_L1_1_ray_optics_29_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_30_0.png" src="../../_images/notebooks_L1_1_ray_optics_30_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -670,7 +861,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_30_0.png" src="../../_images/notebooks_L1_1_ray_optics_30_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_31_0.png" src="../../_images/notebooks_L1_1_ray_optics_31_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -713,7 +904,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Apr 12, 2024</div>
+              Last updated on Apr 13, 2024</div>
           </div>
           <div class="right-details">
             
