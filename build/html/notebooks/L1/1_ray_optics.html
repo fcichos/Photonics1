@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="504b7d0a0d0142f29aa47e41c6bc675c" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="f0f1b151326a488a8abdb15d2d99c112" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="10ec1626556f43128568c2062698bffb" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="95acee86f8e1438397871ca052470e52" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -252,7 +252,7 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="46e8cc2f8ee44125abbfc7de598a89fc" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="9d2941b3c2424fe98b88dd266bd734ea" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -272,7 +272,7 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <p><span class="math">\begin{equation}
 \delta=\alpha+\theta_2
 \end{equation}</span></p>
-<p>We further can identify the following relations for the angles <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span></p>
+<p>Note that we have used a minus sign in front of <span class="math notranslate nohighlight">\(\theta_2\)</span> in the drawing and the equations. The reason for this is tha fact that we have a different turning direction for <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span>. If we define a positive sense for <span class="math notranslate nohighlight">\(\theta_1\)</span> then <span class="math notranslate nohighlight">\(\theta_2\)</span> must be negative. We further can identify the following relations for the angles <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span></p>
 <p><span class="math">\begin{equation}
 \sin(\alpha)=\frac y R,\, \tan(\theta_2)=\frac{y}{z_2},\, \tan(\theta_1)=\frac{y}{z_1}
 \end{equation}</span></p>
@@ -303,43 +303,84 @@ n_2\theta_2=(n_1-n_2)\alpha+n_1\theta_1
 </section>
 <section id="Conjugated-Planes">
 <h4>Conjugated Planes<a class="headerlink" href="#Conjugated-Planes" title="Permalink to this heading">#</a></h4>
-<p>The importance of the result above can be seen from a number of transformations</p>
+<p>The importance of the result above can be seen when sending two different rays from a point <span class="math notranslate nohighlight">\(P_1\)</span> on the objects side and see where the meet on the other side. Consider the following drawing:</p>
+<p>|</p>
+<center><p><img alt="1fdd4a4467d84e208b1771f06b07b5a5" class="no-scaled-link" src="../../_images/conjugated_planes.png" style="width: 500px;" /></p>
+</center><div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Figure 3:</strong> Refraction at a spherical surface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In this drawing, we have two different ray which take a different path. Lets assume, the refractive index on both sides is not so much different such that:</p>
 <p><span class="math">\begin{equation}
 \frac{\Delta y}{z_2}=\frac{y}{z_1}
 \end{equation}</span></p>
+<p>We can then use two ray with different input, e.g., <span class="math notranslate nohighlight">\(\theta_1=0\)</span> for the first ray and <span class="math notranslate nohighlight">\(y=0\)</span> for the second ray. Thus the right side of the formula we derived above is either zero for the first or the second term.</p>
 <p><span class="math">\begin{equation}
-(1)\quad \theta_1=0 \quad \Rightarrow \quad \theta_2^1=-\frac{n_2-n_1}{n_2 R}y, \quad \tan \theta_2=\frac{\Delta y+y}{z_2}
-\end{equation}</span></p>
-<p><span class="math">\begin{equation}
-(2) \quad \theta_1=\theta_2 \quad n_2 \theta_2^2=n_1\theta_1^2
+\textrm{ray} (1)\quad \theta_1=0 \quad \Rightarrow \quad \theta_2^1=-\frac{n_2-n_1}{n_2 R}y, \quad \tan \theta_2^{1}=\frac{\Delta y+y}{z_2}
 \end{equation}</span></p>
 <p><span class="math">\begin{equation}
 \frac{\Delta y+y}{z_2}=-\frac{n_2-n_1}{n_2R}y
 \end{equation}</span></p>
 <p><span class="math">\begin{equation}
-\Delta y+y=-\frac{n_2-n_1}{n_2R}yz_2, \quad \frac{\Delta y}{z_2}=\frac{y}{z_1}
+\textrm{ray} (2) \quad y=0 \quad \quad n_2 \theta_2^2=n_1\theta_1^2
 \end{equation}</span></p>
+<p>from which follows</p>
 <p><span class="math">\begin{equation}
-y\left(\frac{z_2}{z_1}+1\right)=-\frac{n_2-n_1}{n_2R}z_2y, \quad \Delta y=\frac{y}{z_1}z_2
+\Delta y =\frac{z_2}{z_1}\frac{n_1}{n_2}y
 \end{equation}</span></p>
+<p>which we can insert for <span class="math notranslate nohighlight">\(\Delta y\)</span> in</p>
+<p><span class="math">\begin{equation}
+\Delta y+y=-\frac{n_2-n_1}{n_2R}yz_2
+\end{equation}</span></p>
+<p>to obtain</p>
+<p><span class="math">\begin{equation}
+y\left(\frac{z_2}{z_1}+1\right)=-\frac{n_2-n_1}{n_2R}z_2y
+\end{equation}</span></p>
+<p>which gives</p>
 <p><span class="math">\begin{equation}
 \left(\frac{z_2}{z_1}+1\right)=-\frac{n_2-n_1}{n_2R}z_2
 \end{equation}</span></p>
+<p>and thus finally</p>
 <p><span class="math">\begin{equation}
 \frac{1}{z_1}+\frac{1}{z_2}=-\frac{n_2-n_1}{n_2R}
 \end{equation}</span></p>
-<p>The latter equation is actually already at the level of a single spherical surface showing, that all points from a plane at the location <span class="math notranslate nohighlight">\(z_1\)</span> is imaged to points in a plane <span class="math notranslate nohighlight">\(z_2\)</span>. There is no dependence on the point where the rays hit the spherical surface. The two planes are called <strong>conjugated planes</strong>. They belong together and form the foundation of imaging.</p>
+<p>The latter equation is actually already at the level of a single spherical surface showing, that all points from a plane at the location <span class="math notranslate nohighlight">\(z_1\)</span> is imaged to points in a plane <span class="math notranslate nohighlight">\(z_2\)</span>. There is no dependence on the position <span class="math notranslate nohighlight">\(y\)</span> where the rays hit the spherical surface. The two planes are called <strong>conjugated planes</strong>. They belong together and form the foundation of imaging.</p>
 </section>
 <section id="Biconvex-Lens">
 <h4>Biconvex Lens<a class="headerlink" href="#Biconvex-Lens" title="Permalink to this heading">#</a></h4>
 <p>We can now take the equation for a single spherical surface and derive an expression for two spherical surfaces, which form a lens.</p>
 <p><span class="math">\begin{equation}
 \theta_2=\frac{n_1}{n_2}\theta_1-\frac{n_2-n_1}{n_2R}y
-\end{equation}</span> first refraction, <span class="math notranslate nohighlight">\(n_1=1, n_2=n\)</span></p>
+\end{equation}</span></p>
+<p>|</p>
+<center><p><img alt="64fc34ea787f4c18b9f97e12f5806030" class="no-scaled-link" src="../../_images/lens_surface1.png" style="width: 500px;" /></p>
+</center><div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Figure 4:</strong> Refraction at a spherical surface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>first refraction, <span class="math notranslate nohighlight">\(n_1=1, n_2=n\)</span></p>
 <p><span class="math">\begin{equation}
 \theta_t=\frac 1 n \theta_1-\frac{n-1}{nR_1}y
 \end{equation}</span></p>
 <p>second refraction, <span class="math notranslate nohighlight">\(n_1=n, n_2=1\)</span></p>
+<p>|</p>
+<center><p><img alt="8a2b9a1f766941b4b2e108deff264441" class="no-scaled-link" src="../../_images/lens_surface2.png" style="width: 500px;" /></p>
+</center><div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Figure 4:</strong> Refraction at a spherical surface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><span class="math">\begin{equation}
 \theta_t \rightarrow \theta_1, y \rightarrow y
 \end{equation}</span></p>
@@ -546,7 +587,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Apr 13, 2024</div>
+              Last updated on Apr 14, 2024</div>
           </div>
           <div class="right-details">
             
