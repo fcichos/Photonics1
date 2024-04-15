@@ -217,7 +217,7 @@
 <section id="Law-of-reflection">
 <h3>Law of reflection<a class="headerlink" href="#Law-of-reflection" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="f0f1b151326a488a8abdb15d2d99c112" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
+<center><p><img alt="a0185ee3157543a6af1b6dd339690787" class="no-scaled-link" src="../../_images/law_of_reflection.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -234,7 +234,7 @@
 <section id="Law-of-refraction">
 <h3>Law of refraction<a class="headerlink" href="#Law-of-refraction" title="Permalink to this heading">#</a></h3>
 <p>|</p>
-<center><p><img alt="95acee86f8e1438397871ca052470e52" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
+<center><p><img alt="ecc777f3bc7c48e7afd46c28262171db" class="no-scaled-link" src="../../_images/law_of_refraction.png" style="width: 300px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -252,7 +252,7 @@ n_{1}\sin(\theta_{1})=n_{2}\sin(\theta_{2})
 <h4>Refraction on spherical boundary<a class="headerlink" href="#Refraction-on-spherical-boundary" title="Permalink to this heading">#</a></h4>
 <p>Many of the interesting situations of refraction occur on interfaces, which are curved. Lenses, for example, have curved surfaces and the angles of refraction therefore change depending on the position. We can model in the simplest case by a spherical surface or in 2D just by a circular interface. The diagram below shows the definition of such a situation.</p>
 <p>|</p>
-<center><p><img alt="9d2941b3c2424fe98b88dd266bd734ea" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
+<center><p><img alt="39b4c6860ab2474bad32305b272fa37a" class="no-scaled-link" src="../../_images/refraction_spherical.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -305,7 +305,7 @@ n_2\theta_2=(n_1-n_2)\alpha+n_1\theta_1
 <h4>Conjugated Planes<a class="headerlink" href="#Conjugated-Planes" title="Permalink to this heading">#</a></h4>
 <p>The importance of the result above can be seen when sending two different rays from a point <span class="math notranslate nohighlight">\(P_1\)</span> on the objects side and see where the meet on the other side. Consider the following drawing:</p>
 <p>|</p>
-<center><p><img alt="1fdd4a4467d84e208b1771f06b07b5a5" class="no-scaled-link" src="../../_images/conjugated_planes.png" style="width: 500px;" /></p>
+<center><p><img alt="2d91ce0a8973452fa2ae5106dab0300f" class="no-scaled-link" src="../../_images/conjugated_planes.png" style="width: 500px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -357,7 +357,7 @@ y\left(\frac{z_2}{z_1}+1\right)=-\frac{n_2-n_1}{n_2R}z_2y
 \theta_2=\frac{n_1}{n_2}\theta_1-\frac{n_2-n_1}{n_2R}y
 \end{equation}</span></p>
 <p>|</p>
-<center><p><img alt="64fc34ea787f4c18b9f97e12f5806030" class="no-scaled-link" src="../../_images/lens_surface1.png" style="width: 500px;" /></p>
+<center><p><img alt="d7842286b4c148dd9708c0f1d489f839" class="no-scaled-link" src="../../_images/lens_surface1.png" style="width: 400px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -372,7 +372,7 @@ y\left(\frac{z_2}{z_1}+1\right)=-\frac{n_2-n_1}{n_2R}z_2y
 \end{equation}</span></p>
 <p>second refraction, <span class="math notranslate nohighlight">\(n_1=n, n_2=1\)</span></p>
 <p>|</p>
-<center><p><img alt="8a2b9a1f766941b4b2e108deff264441" class="no-scaled-link" src="../../_images/lens_surface2.png" style="width: 500px;" /></p>
+<center><p><img alt="65de6493a57c419483d5947d67ca511f" class="no-scaled-link" src="../../_images/lens_surface2.png" style="width: 400px;" /></p>
 </center><div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <tbody>
@@ -411,16 +411,101 @@ y\left(\frac{z_2}{z_1}+1\right)=-\frac{n_2-n_1}{n_2R}z_2y
 <p><span class="math">\begin{equation}
 y_2=-\frac{z_2}{z_1}y_1
 \end{equation}</span></p>
-<p>magnification</p>
-<p>two equations which can be used to ??? images of refractive optics in the limit of paraxial approximation</p>
+<p>magnification.</p>
+</section>
+<section id="Aberrations">
+<h4>Aberrations<a class="headerlink" href="#Aberrations" title="Permalink to this heading">#</a></h4>
+<p>The linearization we did with the angular functions comes at a cost. The spherical shape is only a good optical surface if we have incident rays that are incident under small angles. At larger angles the sine function is not anymore well represented by a linear function and the paraxial approximation gets increasing bad.</p>
 <p><span class="math">\begin{equation}
 \sin(x)\approx x-\frac{x^3}{6}+\frac{x^5}{120}+ \dots
 \end{equation}</span></p>
-<p>that is</p>
+<p>The plot below shows the accuracy of the linear and the cubic approximation.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;exact&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s2">&quot;k--&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;k-.&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;second order&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x [rad]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script src='https://d3js.org/d3.v6.min.js'></script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_L1_1_ray_optics_23_8.png" class="no-scaled-link" src="../../_images/notebooks_L1_1_ray_optics_23_8.png" style="width: 333px; height: 320px;" />
+</div>
+</div>
+<p>The linear approximation is only good when</p>
 <p><span class="math">\begin{equation}
 \frac{x^3}{6} \ll x \quad \rm{or} \quad \frac{x^2}{6} \ll 1 \quad \rm{or} \quad x \ll 0.4\:\:\rm{in~radians}
 \end{equation}</span></p>
-<p>this is not true for microscopy lenses, for example, there we have angles up to 80°, but it is then still a first oder approximation</p>
+<p>According to that all angles should be below about <span class="math notranslate nohighlight">\(23^{\circ}\)</span> for the paraxial apprimation to work nicely. This is not true for microscopy lenses, for example, there we have angles up to <span class="math notranslate nohighlight">\(80^{\circ}\)</span>. The approximation is then not wrong, but just not accurate enough to describe ray propagation.</p>
+<p>|</p>
+<center><p><img alt="f5702c1f646340b784f8836d527c594d" class="no-scaled-link" src="../../_images/spherical_aberrations.png" style="width: 400px;" /></p>
+</center><div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Figure 4:</strong> Spherical aberrations at a spherical lens. Rays the are incident far away from the optical axis are refracted more than rays close to the optical axis due to the spherical shape of the surface.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="Aberration-Characterization-and-Zernike-Polynomials">
 <h4>Aberration Characterization and Zernike Polynomials<a class="headerlink" href="#Aberration-Characterization-and-Zernike-Polynomials" title="Permalink to this heading">#</a></h4>
@@ -544,7 +629,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L1_1_ray_optics_28_0.png" src="../../_images/notebooks_L1_1_ray_optics_28_0.png" />
+<img alt="../../_images/notebooks_L1_1_ray_optics_32_0.png" src="../../_images/notebooks_L1_1_ray_optics_32_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -587,7 +672,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Apr 14, 2024</div>
+              Last updated on Apr 15, 2024</div>
           </div>
           <div class="right-details">
             
@@ -615,6 +700,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <li><a class="reference internal" href="#Refraction-on-spherical-boundary">Refraction on spherical boundary</a></li>
 <li><a class="reference internal" href="#Conjugated-Planes">Conjugated Planes</a></li>
 <li><a class="reference internal" href="#Biconvex-Lens">Biconvex Lens</a></li>
+<li><a class="reference internal" href="#Aberrations">Aberrations</a></li>
 <li><a class="reference internal" href="#Aberration-Characterization-and-Zernike-Polynomials">Aberration Characterization and Zernike Polynomials</a></li>
 <li><a class="reference internal" href="#Total-Internal-Reflection">Total Internal Reflection</a></li>
 </ul>
