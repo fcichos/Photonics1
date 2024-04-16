@@ -578,9 +578,9 @@
     "\\end{equation}\n",
     "\n",
     "\n",
-    "| <center> <img src=\"lens_surface1.png\" width=\"400\"/> </center> |\n",
-    "|:-:|\n",
-    "| **Figure 4:** Refraction at a spherical surface |\n",
+    "| <center> <img src=\"lens_surface1.png\" width=\"400\"/> </center> | <center> <img src=\"lens_surface2.png\" width=\"400\"/> </center> |\n",
+    "|:-:|:-|\n",
+    "| **Figure 4:** For th refraction at two spherical boundaries, we would have to  |\n",
     "\n",
     "first refraction, $n_1=1, n_2=n$\n",
     "\n",
@@ -590,10 +590,6 @@
     "\n",
     "second refraction, $n_1=n, n_2=1$\n",
     "\n",
-    "\n",
-    "| <center> <img src=\"lens_surface2.png\" width=\"400\"/> </center> |\n",
-    "|:-:|\n",
-    "| **Figure 4:** Refraction at a spherical surface |\n",
     "\n",
     "\n",
     "\\begin{equation}\n",
@@ -658,6 +654,9 @@
    },
    "source": [
     "#### Aberrations\n",
+    "\n",
+    "\n",
+    "**Spherical Aberration**\n",
     "\n",
     "The linearization we did with the angular functions comes at a cost. The spherical shape is only a good optical surface if we have incident rays that are incident under small angles. At larger angles the sine function is not anymore well represented by a linear function and the paraxial approximation gets increasing bad.\n",
     "\n",
@@ -871,7 +870,6 @@
    "execution_count": 12,
    "id": "2409ba4a-3021-40a7-afac-bf9998efe9ff",
    "metadata": {
-    "nbsphinx": "hidden",
     "tags": []
    },
    "outputs": [

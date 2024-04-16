@@ -162,6 +162,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../L1/1_ray_optics.html">General Optics</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2_total_internal_reflection.html">General Optics</a></li>
+</ul>
 
 </div>
 </div>
@@ -207,7 +211,7 @@
 <p>If we now consider the outgoing angle <span class="math notranslate nohighlight">\(\theta_2\)</span> as a function of the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span>, we obtain a characteristic plot, which looks for the materials glass (<span class="math notranslate nohighlight">\(n=1.5\)</span>) and air (<span class="math notranslate nohighlight">\(n=1\)</span>) like below. If the incident light is coming from air and following onto glass, we can change the incident angle up to <span class="math notranslate nohighlight">\(90\)</span> degree, but only reach an outgoing angle of <span class="math notranslate nohighlight">\(41.8\)</span> degree. If we reverse the materials, however, an outgoing angle is reached and an angle of
 incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. Light at larger incident angles is not anymore refracted out of the glass but reflected into the glass. Therefore, this phenomenon is called <strong>total internal reflection</strong>. It has some fantastic applications.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
@@ -244,6 +248,538 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
 <img alt="../../_images/notebooks_L2_2_TIR_5_0.png" src="../../_images/notebooks_L2_2_TIR_5_0.png" />
 </div>
 </div>
+<section id="Total-internal-reflection">
+<h3>Total internal reflection<a class="headerlink" href="#Total-internal-reflection" title="Permalink to this heading">#</a></h3>
+<p><span class="math">\begin{equation}
+n_1 \sin(\theta_1)=n_2\sin(\theta_2)
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+n_2 < n_1
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\sin(\theta_1)=\frac{n_2}{n_1}\sin(\theta_2)
+\end{equation}</span></p>
+<p><span class="math notranslate nohighlight">\(n_2/n_1 &lt;1\)</span></p>
+<p>but <span class="math notranslate nohighlight">\(\theta_2\)</span> is max. <span class="math notranslate nohighlight">\(\pi/2\)</span></p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\sin (\theta_2)\)</span> should be larger than 1</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> no solution for refraction</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> reflection for all incident angles <span class="math notranslate nohighlight">\(\theta_1&gt;\theta_c\)</span></div>
+</div>
+<p><span class="math">\begin{equation}
+\theta_c=\sin^{-1}\left|\frac{n_2}{n_1}\right|
+\end{equation}</span></p>
+<div class="line-block">
+<div class="line">for glass: 41.8°</div>
+<div class="line">for water: 48.7°</div>
+<div class="line">for diamond: 24°</div>
+<div class="line">in H<span class="math notranslate nohighlight">\(_2\)</span>O: 33.6°</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> measurement of refraction indices</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> reflection without losses</div>
+</div>
+<section id="Guiding-light-fibers">
+<h4>Guiding light fibers<a class="headerlink" href="#Guiding-light-fibers" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>cylindrical dielectric wave guide</p></li>
+<li><p>central core which guids light</p></li>
+<li><p>cladding with lower <span class="math notranslate nohighlight">\(n\)</span> than the core</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> total internal reflection</div>
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> light guiding with low loss</div>
+</div>
+<p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> typically reflected ??? waves: - multimode (???) - single mode - gradient index (???)</p>
+</section>
+<section id="Step-index-fiber">
+<h4>Step-index fiber<a class="headerlink" href="#Step-index-fiber" title="Permalink to this heading">#</a></h4>
+<p><span class="math">\begin{equation}
+\Delta=\frac{n_1-n_2}{n_1}
+\end{equation}</span></p>
+<div class="line-block">
+<div class="line">mostly made of ??? silica <span class="math notranslate nohighlight">\(\rm{SiO}_2\)</span></div>
+<div class="line">refractive indices from <span class="math notranslate nohighlight">\(1.44\)</span> to <span class="math notranslate nohighlight">\(1.46\)</span></div>
+<div class="line"><span class="math notranslate nohighlight">\(\Delta=0.001\)</span> and <span class="math notranslate nohighlight">\(0.02\)</span></div>
+</div>
+</section>
+<section id="Meridional-ray">
+<h4>Meridional ray<a class="headerlink" href="#Meridional-ray" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>all in plane</p></li>
+<li><p>up to <span class="math notranslate nohighlight">\(\overline \theta_c=\frac{\pi}{2}-\theta_c=\cos^{-1}\left(\frac{n_2}{n_1}\right)\)</span></p></li>
+</ul>
+</section>
+<section id="Skewed-ray">
+<h4>Skewed ray<a class="headerlink" href="#Skewed-ray" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>planes ??? angle <span class="math notranslate nohighlight">\(\phi\)</span> with core cladding ??? <span class="math notranslate nohighlight">\(\theta &lt; \overline \theta_c\)</span></p></li>
+</ul>
+</section>
+<section id="Numerical-aperture">
+<h4>Numerical aperture<a class="headerlink" href="#Numerical-aperture" title="Permalink to this heading">#</a></h4>
+<p>calculation of the numerical aperture <span class="math">\begin{equation}
+1 \sin (\theta_a)=n_1 \sin \overline \theta_c = n_1 (1-\cos^2(\theta_c))^\frac 1 2
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\theta_c+\overline \theta_c+\frac \pi 2 = \pi
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\theta_c+\overline \theta_c=\frac \pi 2
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\theta_c=\frac \pi 2 -\overline \theta_c
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+n_1 \sin \theta_c=n_2
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\sin \theta_c=\frac{n_2}{n_1}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\sin \left(\frac \pi 2 - \overline \theta_c \right) =\frac{n_2}{n_1}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\cos (\overline \theta_c)=\frac{n_2}{n_1}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\sin (\theta_a)=n_1\left(1-\frac{n_2^2}{n_1^2}\right)^\frac 1 2 =\sqrt{n_1^2-n_2^2}=NA-n_1 (2 \Delta)^\frac 1 2
+\end{equation}</span></p>
+</section>
+</section>
+</section>
+<section id="Matrix-Optics">
+<h2>Matrix Optics<a class="headerlink" href="#Matrix-Optics" title="Permalink to this heading">#</a></h2>
+<p>both are linear equations</p>
+<p><span class="math">\begin{equation}
+\theta_2=\theta_1-\frac 4 f \qquad \theta_2\approx \frac{n_1}{n_2}\theta_1-\frac{n_2-n_1}{n_2R}y
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+y_2=Ay_1+B\theta_1
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\theta_2=Cy_1+D\theta_1
+\end{equation}</span></p>
+<p>We want to express an optical system by a set of simple mathematical expressions, i.e., linear projections.</p>
+<p><span class="math">\begin{equation}
+\left[\begin{array}{r}
+y_2 \\
+\theta_2
+\end{array}\right]=
+\left[\begin{array}{rr}
+A & B \\
+C & D
+\end{array}\right]
+\left[\begin{array}{r}
+y_1 \\
+\theta_1
+\end{array}\right]
+\end{equation}</span></p>
+<p>Here, $</p>
+<p>$ is the ray transfer matrix.</p>
+<p><span class="math">\begin{equation}
+M=
+\begin{bmatrix}
+1 & d \\
+0 & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+M=
+\begin{bmatrix}
+1 & 0 \\
+0 & \frac{n_1}{n_2}
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+M=
+\begin{bmatrix}
+1 & 0 \\
+-\frac{n_2-n_1}{n_2R} & \frac{n_1}{n_2}
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+M=
+\begin{bmatrix}
+1 & 0 \\
+-\frac 1 f & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(f&gt;0\)</span> convex</div>
+<div class="line"><span class="math notranslate nohighlight">\(f&lt;0\)</span> concave</div>
+</div>
+<p>There is a whole set of precalculated matrices for optical elements.</p>
+<p><span class="math notranslate nohighlight">\(M=M_NM_{N-1}\dots M_1\)</span> (remember the two curved surfaces)</p>
+<p>free space <span class="math">\begin{equation}
+M=
+\begin{bmatrix}
+1 & d \\
+0 & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p>thin lens <span class="math">\begin{equation}
+M=
+\begin{bmatrix}
+1 & 0 \\
+-\frac 1 f & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+M=\begin{bmatrix}
+1 & 0 \\
+-\frac 1 f & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & d \\
+0 & 1
+\end{bmatrix}=
+\begin{bmatrix}
+1 & d \\
+-\frac 1 f & 1- \frac d f
+\end{bmatrix}
+\end{equation}</span></p>
+</section>
+<section id="For-example:-Optical-cloaking">
+<h2>For example: Optical cloaking<a class="headerlink" href="#For-example:-Optical-cloaking" title="Permalink to this heading">#</a></h2>
+<p>perfect cloack is an optical system which apparently immitates free space propagation</p>
+<p><span class="math">\begin{equation}
+M=
+\begin{bmatrix}
+1 & \frac L n \\
+0 & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p>cloacking condition <span class="math">\begin{equation}
+\begin{bmatrix}
+A & B \\
+C & D
+\end{bmatrix}=
+\begin{bmatrix}
+1 & \frac L n \\
+0 & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math notranslate nohighlight">\(C=0 \quad\)</span> no ??? power, afocal</p>
+<p><span class="math">\begin{equation}
+\begin{bmatrix}
+A & B \\
+C & D
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 0 \\
+-\frac 1 f & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p>not possible except for $f=:nbsphinx-math:<cite>pm `:nbsphinx-math:</cite>infty <cite>:nbsphinx-math:</cite>Rightarrow <a href="#id2"><span class="problematic" id="id3">`</span></a>$ no cloaking</p>
+<p><span class="math">\begin{equation}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_2} & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & t \\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_1} & 1
+\end{bmatrix}=
+\begin{bmatrix}
+1-\frac{t}{f_1} & t \\
+-\frac{f_1+f_2-t}{f_1f_2} & 1-\frac{t}{f_2}
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> needs <span class="math notranslate nohighlight">\(f_1=f_2=\pm \infty\)</span></p>
+<p><span class="math notranslate nohighlight">\(1-\frac{t}{f_1}=1,~ 1-\frac{t}{f_2}=1\)</span></p>
+<p><span class="math">\begin{equation}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_3} & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & t_2 \\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_2} & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & t_1 \\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_1} & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+C=0:\quad
+f_2=-\frac{(f_1-t_1)(f_3-t_2)}{f_1+f_3-t_1-t_2}
+\end{equation}</span></p>
+<p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> matrix, four lens system</p>
+<p><span class="math">\begin{equation}
+\begin{bmatrix}
+\frac{f_3(f_1-t_1)}{f_1(f_3-t_2)} & t_1+t_2+t_1t_2\frac{f_1+f_3-t_1-t_2}{(f_1-t_1)(f_3-t_2)}\\
+0 & \frac{f_1 (f_3-t_2)}{f_3 (f_1-t_1)}
+\end{bmatrix}
+\end{equation}</span></p>
+<p>from <span class="math notranslate nohighlight">\(B=t_1+t_2\)</span></p>
+<p><span class="math">\begin{equation}
+t_1t_2\frac{f_1+f_3-t_1-t_2}{(f_1-t_1)(f_3-t_2)}=0
+\end{equation}</span></p>
+<ol class="loweralpha">
+<li><div class="line-block">
+<div class="line">this in only true if <span class="math notranslate nohighlight">\(t_1=0\)</span> or <span class="math notranslate nohighlight">\(t_2=0\)</span></div>
+</div>
+</li>
+<li><p>or if <span class="math notranslate nohighlight">\(f_1+f_3-t_1-t_2=0\)</span></p></li>
+<li><div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> two lens system <span class="math notranslate nohighlight">\(\Rightarrow\)</span> no cloaking</div>
+</div>
+</li>
+<li><p>follows that <span class="math notranslate nohighlight">\(f_2 \rightarrow \infty\)</span> <span class="math notranslate nohighlight">\(\Rightarrow\)</span> two lens <span class="math notranslate nohighlight">\(\Rightarrow\)</span> no cloaking</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> three lens, no cloaking</p>
+<p><span class="math">\begin{equation}
+\begin{bmatrix}
+1 & t_4 \\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_4} & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & t_3 \\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_3} & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & t_2 \\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_2} & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & t_1 \\
+0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 \\
+-\frac{1}{f_1} & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<div class="line-block">
+<div class="line">with conditions <span class="math notranslate nohighlight">\(f_1=f_4, f_2=f_3, t_1=t_3\)</span></div>
+<div class="line">require that <span class="math notranslate nohighlight">\(A=1, C=0\)</span> with <span class="math notranslate nohighlight">\(t_1=f_1+f_2\)</span></div>
+</div>
+<p><span class="math">\begin{equation}
+\begin{bmatrix}
+1 & f_1(-2t_1^2+f_1(2t_1+t_2))/(f_1-t_1)^2)\\
+0 & 1
+\end{bmatrix}
+\end{equation}</span></p>
+<p><span class="math notranslate nohighlight">\(B=2t_1+t_2\)</span> <span class="math">\begin{equation}
+t_2=2f_2 \frac{f_1+f_2}{f_1-f_2}
+\end{equation}</span></p>
+<section id="Fermat's-Principle">
+<h3>Fermat’s Principle<a class="headerlink" href="#Fermat's-Principle" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>optical inhomogeneous material <span class="math notranslate nohighlight">\(n(\vec r)\)</span>, <span class="math notranslate nohighlight">\(\vec r= \{x, y, z\}\)</span></p></li>
+<li><p>optical path length <span class="math">\begin{equation}
+OP=\int_A^B n(\vec r) \mathrm ds
+\end{equation}</span></p></li>
+<li><p>time taken to get from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span> is proportonal to <span class="math notranslate nohighlight">\(OP\)</span> length</p></li>
+</ul>
+<p>Fermat’s principle: optical path length is an extremum to neighboring path</p>
+<p><span class="math">\begin{equation}
+\delta \int_A^B n(\vec r)\mathrm d s=0
+\end{equation}</span></p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow\)</span> minimum, maximum, point of inflection</div>
+<div class="line">usually minimum</div>
+</div>
+<p>point of inflection</p>
+<section id="Refraction">
+<h4>Refraction<a class="headerlink" href="#Refraction" title="Permalink to this heading">#</a></h4>
+<p><span class="math">\begin{equation}
+A=\begin{pmatrix}
+0 \\ z_1
+\end{pmatrix}, \quad
+B= \begin{pmatrix}
+y_2 \\ z_2
+\end{pmatrix}, \quad
+R=\begin{pmatrix}
+y_0 \\ 0
+\end{pmatrix}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+OPL=n_1 \sqrt{y_0^2+z_1^2}+n_2\sqrt{(y_2-y_0)^2+z_2^2}
+\end{equation}</span></p>
+<p>Fermat: <span class="math">\begin{equation}
+\begin{split}
+\frac{\mathrm d (OPL)}{\mathrm d y_0}&=n_1\frac{y_0}{\sqrt{y_0^2+z_1^2}}-n_2\frac{y_2-y_0}{\sqrt{(y_2-y_0)^2+z_2^2}}=0\\
+&= n_1 \frac{y_0}{l_1}-n_2 \frac{y_2-y_0}{l_2}\\
+&= n_1 \sin (\alpha) - n_2 \sin (\beta)
+\end{split}
+\end{equation}</span></p>
+<p>This is Snell’s law.</p>
+</section>
+<section id="Thin-lens">
+<h4>Thin lens<a class="headerlink" href="#Thin-lens" title="Permalink to this heading">#</a></h4>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(n \dots\)</span> refraction index of lens</div>
+<div class="line"><span class="math notranslate nohighlight">\(R_1, R_2 \dots\)</span> curvature</div>
+</div>
+<p><span class="math">\begin{equation}
+\begin{split}
+OPL&= z_1(y)+n(d-z_1(y)-z_2(y))+z_2(y)+\sqrt{f^2+y^2}\\
+&\equiv nd+f-(n-1)\left(\frac{y^2}{2 R_1}-\frac{y^2}{2R_2}\right)+\frac{y^2}{2f}
+\end{split}
+\end{equation}</span></p>
+<p><span class="math notranslate nohighlight">\(\Rightarrow\)</span> all OPL must be the same if the rays converge at f</p>
+<p><span class="math">\begin{equation}
+\frac{\mathrm d (OPL)}{\mathrm d y}=-(n-1)\left(\frac{y}{R_1}-\frac{y}{R_2} \right)+\frac y f =0
+\end{equation}</span></p>
+</section>
+</section>
+<section id="Formulation-of-Fermat's-principle">
+<h3>Formulation of Fermat’s principle<a class="headerlink" href="#Formulation-of-Fermat's-principle" title="Permalink to this heading">#</a></h3>
+<p>integral (global) <span class="math">\begin{equation}
+\delta \int_A^B n(\vec{r})\,\mathrm ds=0
+\end{equation}</span></p>
+<p>differential (local) <span class="math">\begin{equation}
+\frac{\mathrm d}{\mathrm ds}\left(n\frac{\mathrm d (\vec{r})}{\mathrm ds}\right)=\nabla n
+\end{equation}</span></p>
+<p>if the trajectory is described by <span class="math notranslate nohighlight">\(x(s), y(s), z(s)\)</span> ??? variational calculus.</p>
+<section id="Differential-form-in-components">
+<h4>Differential form in components<a class="headerlink" href="#Differential-form-in-components" title="Permalink to this heading">#</a></h4>
+<p><span class="math">\begin{equation}
+\frac{\mathrm d}{\mathrm ds}\left(n \frac{\mathrm dx}{\mathrm ds}\right)=\frac{\partial n}{\partial x} \qquad \frac{\mathrm d}{\mathrm ds}\left(n \frac{\mathrm dy}{\mathrm ds}\right)=\frac{\partial n}{\partial y} \qquad \frac{\mathrm d}{\mathrm ds}\left(n \frac{\mathrm dz}{\mathrm ds}\right)=\frac{\partial n}{\partial z}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+x(s) \hspace{3.9cm} y(s) \hspace{3.9cm} z(s)
+\end{equation}</span></p>
+<p>difficult to solve but possible with parametrization</p>
+<p><span class="math">\begin{equation}
+x=x(z),\quad y=y(z), \quad \mathrm ds = \mathrm dz  \sqrt{1+\left(\frac{\mathrm dx}{\mathrm dz}\right)^2+\left(\frac{\mathrm dy}{\mathrm dz}\right)^2}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\mathrm ds \approx \mathrm dz
+\end{equation}</span></p>
+<p>paraxial approximation: <span class="math">\begin{equation}
+\Rightarrow \frac{\mathrm d}{\mathrm dz}\left(n\frac{\mathrm dx}{\mathrm dz}\right) \approx \frac{\partial n}{\partial x} \qquad \frac{\mathrm d}{\mathrm dz}\left(n \frac{\mathrm dy}{\mathrm dz}\right)\approx \frac{\partial n}{\partial y}
+\end{equation}</span></p>
+<p>homogeneous medium: <span class="math">\begin{equation}
+n={\rm const.} \quad \Rightarrow \quad \frac{\mathrm d^2 x}{\mathrm dz^2}=\frac{\mathrm d^2 y}{\mathrm dz^2}=0 \quad {\rm straight~line}
+\end{equation}</span></p>
+</section>
+</section>
+<section id="GRIN-lens">
+<h3>GRIN lens<a class="headerlink" href="#GRIN-lens" title="Permalink to this heading">#</a></h3>
+<p>graded index lens</p>
+<p>SELFOC <span class="math">\begin{equation}
+n^2(y)=n_0^2(1-\alpha^2y^2)
+\end{equation}</span></p>
+<p>for <span class="math notranslate nohighlight">\(\alpha^2y^2 \ll 1\)</span>: parabolic index profile <span class="math">\begin{equation}
+n(y)\approx n_0 \left(1-\frac 1 2 \alpha^2y^2\right)
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\frac{\mathrm d^2y}{\mathrm dz^2}\approx -\alpha^2y=\frac{\partial n}{\partial y}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+y(z)=y_0 \cos(\alpha z)+\frac{\theta_0}{\alpha}\sin(\alpha z)
+\end{equation}</span> The refractive index square is like a potential.</p>
+<section id="What-you-should-know:">
+<h4>What you should know:<a class="headerlink" href="#What-you-should-know:" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>How to create a magnifying optical system?</p></li>
+<li><p>What are the simplifying assumptions behind the imaging equations for a thin lens?</p></li>
+<li><p>What are virtual images and real images?</p></li>
+<li><p>How to construct an image of a lens or a lens system?</p></li>
+<li><p>How to detect the direction from which light is coming?</p></li>
+</ul>
+</section>
+</section>
+<section id="Mirage-effect-over-a-hot-street">
+<h3>Mirage effect over a hot street<a class="headerlink" href="#Mirage-effect-over-a-hot-street" title="Permalink to this heading">#</a></h3>
+<p>approximation <span class="math">\begin{equation}
+n(y)=n_0+\alpha y \quad{\rm (approximately~linear)}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\frac{\mathrm d^2x}{\mathrm da^2}=0, \quad \frac{\mathrm d^2 y}{\mathrm da^2}=\frac{1}{2}\nabla n^2=\alpha(n_0+\alpha y)
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\Rightarrow x=Aa+B
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\Rightarrow y=C \cosh(\alpha a)+D \sinh(\alpha a)-\left(\frac{n_0}{a}\right)
+\end{equation}</span></p>
+<p>let <span class="math notranslate nohighlight">\(a=0\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span> (like <span class="math notranslate nohighlight">\(t=0\)</span> in mechanics)</p>
+<p>at <span class="math notranslate nohighlight">\(x_{a=0}=0\)</span>, <span class="math notranslate nohighlight">\(y_{a=0}=h\)</span></p>
+<p><span class="math">\begin{equation}
+\Rightarrow B=0, \quad C=h+\frac{n_0}{\alpha}
+\end{equation}</span></p>
+<p>same now checked with <span class="math notranslate nohighlight">\(\frac{\mathrm d \vec{r}}{\mathrm da}=n\)</span> (corresponds to velocity) at <span class="math notranslate nohighlight">\(x=0\)</span> horizontal</p>
+<p><span class="math">\begin{equation}
+\Rightarrow \frac{\mathrm dx}{\mathrm da}=n_h=n_0+\alpha h, \quad \frac{\mathrm dy}{\mathrm da}=0
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+\Rightarrow A=n_h, \quad D=0
+\end{equation}</span></p>
+<p>solution: ? <span class="math">\begin{equation}
+x=(n_0+\alpha h)a
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+y=\left(\frac{n_0}{\alpha}+h\right)\cosh(\alpha a)-\frac{n_0}{\alpha}
+\end{equation}</span></p>
+</section>
+<section id="{\bf-F-=-m-\cdot-a}-optics">
+<h3><span class="math notranslate nohighlight">\({\bf F = m \cdot a}\)</span> optics<a class="headerlink" href="#{\bf-F-=-m-\cdot-a}-optics" title="Permalink to this heading">#</a></h3>
+<p>Newton’s law <span class="math">\begin{equation}
+\frac{\mathrm d^2 \vec{r}}{\mathrm dt^2}=-\nabla U(\vec{r}), \quad m=1
+\end{equation}</span></p>
+<p>Fermat’s principle <span class="math">\begin{equation}
+\frac{\mathrm d^2 \vec{r}}{\mathrm ds^2}=\nabla\left(\frac 1 2 n^2(\vec{r}) \right)
+\end{equation}</span></p>
+<p>side condition: <span class="math">\begin{equation}
+\left|\frac{\mathrm d \vec{r}}{\mathrm ds} \right|=n
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+U(\vec{r})=\frac 1 2 n^2 (\vec{r})
+\end{equation}</span></p>
+<section id="Corresponding-quantities">
+<h4>Corresponding quantities<a class="headerlink" href="#Corresponding-quantities" title="Permalink to this heading">#</a></h4>
+<p>Example:</p>
+<p>Coulomb potential: <span class="math">\begin{equation}
+U(r)=\frac{Q}{4 \pi \epsilon_0 r}
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+r_{\rm RF}(\phi)=\frac{(2 E/k)b^2}{e \cos(\phi-\chi)-1}
+\end{equation}</span></p>
+<p>photonic potential: <span class="math">\begin{equation}
+U(r)=-\frac{n_0^2}{2}\left(1+\frac{2 \Delta n R}{n_0 r}+ \dots \right)
+\end{equation}</span></p>
+<p><span class="math">\begin{equation}
+r_{\rm PRF}(\phi)\approx \frac{|\zeta|b^2}{\sqrt{b^2\zeta^2+1}\cos(\phi-\chi)-1}
+\end{equation}</span></p>
+</section>
+</section>
+<section id="Ray-optics-and-momentum">
+<h3>Ray optics and momentum<a class="headerlink" href="#Ray-optics-and-momentum" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>momentum of a photon in a ray <span class="math notranslate nohighlight">\(\vec{p}=\hbar \vec{k}, \vec{k}=\frac{2 \pi}{\lambda}\vec{e}_k\)</span></p></li>
+<li><p>direction and wavelength changes</p></li>
+<li><p>reflection and refraction</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -264,7 +800,7 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Apr 15, 2024</div>
+              Last updated on Apr 16, 2024</div>
           </div>
           <div class="right-details">
             
@@ -286,7 +822,40 @@ incidence of <span class="math notranslate nohighlight">\(41.8\)</span> degree. 
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">General Optics</a><ul>
-<li><a class="reference internal" href="#Total-Internal-Reflection">Total Internal Reflection</a></li>
+<li><a class="reference internal" href="#Total-Internal-Reflection">Total Internal Reflection</a><ul>
+<li><a class="reference internal" href="#Total-internal-reflection">Total internal reflection</a><ul>
+<li><a class="reference internal" href="#Guiding-light-fibers">Guiding light fibers</a></li>
+<li><a class="reference internal" href="#Step-index-fiber">Step-index fiber</a></li>
+<li><a class="reference internal" href="#Meridional-ray">Meridional ray</a></li>
+<li><a class="reference internal" href="#Skewed-ray">Skewed ray</a></li>
+<li><a class="reference internal" href="#Numerical-aperture">Numerical aperture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Matrix-Optics">Matrix Optics</a></li>
+<li><a class="reference internal" href="#For-example:-Optical-cloaking">For example: Optical cloaking</a><ul>
+<li><a class="reference internal" href="#Fermat's-Principle">Fermat’s Principle</a><ul>
+<li><a class="reference internal" href="#Refraction">Refraction</a></li>
+<li><a class="reference internal" href="#Thin-lens">Thin lens</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Formulation-of-Fermat's-principle">Formulation of Fermat’s principle</a><ul>
+<li><a class="reference internal" href="#Differential-form-in-components">Differential form in components</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#GRIN-lens">GRIN lens</a><ul>
+<li><a class="reference internal" href="#What-you-should-know:">What you should know:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Mirage-effect-over-a-hot-street">Mirage effect over a hot street</a></li>
+<li><a class="reference internal" href="#{\bf-F-=-m-\cdot-a}-optics"><span class="math notranslate nohighlight">\({\bf F = m \cdot a}\)</span> optics</a><ul>
+<li><a class="reference internal" href="#Corresponding-quantities">Corresponding quantities</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Ray-optics-and-momentum">Ray optics and momentum</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
