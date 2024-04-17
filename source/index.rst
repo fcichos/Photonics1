@@ -14,13 +14,13 @@ In this course we will introduce into the field of optics and photonics. We will
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Lecture 1:
 
    notebooks/L1/1_ray_optics.ipynb
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Lecture 2:
 
    notebooks/L2/2_total_internal_reflection.ipynb
