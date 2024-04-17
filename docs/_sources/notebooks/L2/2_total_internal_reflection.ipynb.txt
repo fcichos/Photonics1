@@ -1,14 +1,6 @@
 {
  "cells": [
   {
-   "cell_type": "markdown",
-   "id": "79c3ba24-85ee-4cc6-822f-bc887c39c32a",
-   "metadata": {},
-   "source": [
-    "# General Optics"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 20,
    "id": "599f704d-edf0-4c94-a81e-fa5578561d6b",
